@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Rahma</string>
+    <string name="organization">organization</string>
+    <string name="Donor">Donor</string>
+    <string name="Beneficiary">Beneficiary</string>
+    <string name="loginhintname">Username</string>
+    <string name="loginhintpassword">Password</string>
+    <string name="forgetPass">"Did you forget password ? "</string>
+    <string name="Enter">Enter</string>
+    <string name="Phoneunmberhint">Phone Number</string>
+    <string name="EmailHint">Email Adress</string>
+    <string name="locationhint">Location</string>
+    <string name="haveAcount">I have account</string>
+    <string name="Login">Login</string>
+</resources>

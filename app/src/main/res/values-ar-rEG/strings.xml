@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">رحمة</string>
+    <string name="organization">جمعية</string>
+    <string name="Donor">متبرع</string>
+    <string name="Beneficiary">مستفيد</string>
+    <string name="loginhintname">اسم المستخدم</string>
+    <string name="loginhintpassword">كلمة المرور</string>
+    <string name="forgetPass">هل نسيت كلمة السر ؟</string>
+    <string name="Enter">دخول</string>
+    <string name="Phoneunmberhint">" رقم الجوال"</string>
+    <string name="EmailHint">البريد الالكتروني</string>
+    <string name="locationhint">المدينة</string>
+    <string name="Login">دخول</string>
+    <string name="haveAcount">"لدي حساب بالفعل "</string>
+</resources>
