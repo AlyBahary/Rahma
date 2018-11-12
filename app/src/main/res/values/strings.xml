@@ -22,5 +22,27 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="main_home">Home</string>
+    <string name="Setting">Setting</string>
+    <string name="Aboutus">About us</string>
+    <string name="Profile">Profile</string>
+    <string name="AboutUs">About us</string>
+    <string name="Suggestion">Suggestion</string>
+    <string name="Sponser">Sponsers</string>
+    <string name="Exit">Exit</string>
+    <string name="Writhere">Write Here</string>
+    <string name="SendMsg">Send Message</string>
+    <string name="Send">Send</string>
+    <string name="Language">Language</string>
+    <string name="Contact_Us">Contact us</string>
+    <string name="addDonation">Add new Donation</string>
+    <string name="addressList">Adress List</string>
+    <string name="donationsList">Donation List</string>
+    <string name="Food">Food</string>
+    <string name="accesories">Accesories</string>
+    <string name="FoodQuantityTxt">this food is enough for</string>
+    <string name="morethanten">more Than Ten People</string>
+    <string name="Lessthanten">Less than 10 People</string>
+    <string name="UploadPhoto">Upload Photo</string>
 
 </resources>

@@ -13,4 +13,12 @@
     <string name="locationhint">المدينة</string>
     <string name="Login">دخول</string>
     <string name="haveAcount">"لدي حساب بالفعل "</string>
+    <string name="main_home">الرئيسية</string>
+    <string name="Setting">"الاعدادات "</string>
+    <string name="Aboutus">من نحن</string>
+    <string name="Profile">"الملف الشخصي "</string>
+    <string name="AboutUs">من نحن</string>
+    <string name="Suggestion">اقتراحات</string>
+    <string name="Sponser">الرعاه</string>
+    <string name="Exit">خروج</string>
 </resources>

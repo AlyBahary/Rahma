@@ -1,36 +1,39 @@
 package com.example.bahary.rahma;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
+import android.support.v4.app.FragmentTransaction;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
+
+import com.example.bahary.rahma.HomeFragments.addnewdonationFragment;
+import com.example.bahary.rahma.NavFragments.ContactUSFragment;
+import com.example.bahary.rahma.HomeFragments.MainHomeFragment;
+import com.example.bahary.rahma.NavFragments.SettingFragment;
+import com.example.bahary.rahma.NavFragments.SuggestionFragment;
+import com.example.bahary.rahma.NavFragments.ProfileFragment;
 
 public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
+    addnewdonationFragment addnewdonationfragment;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        toolbar.getBackground().setAlpha(50);
+        final MainHomeFragment mainHomeFragment=new MainHomeFragment();
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.Frgment_Container, mainHomeFragment);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -38,8 +41,24 @@ public class HomeActivity extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+
+        final NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        navigationView.getMenu().getItem(0).setChecked(true);
+          addnewdonationfragment=new addnewdonationFragment();
+        mainHomeFragment.setOnSearchBarHomeClicked(new MainHomeFragment.OnSearchBarHomeClicked() {
+            @Override
+            public void setOnSearchBarHomeClicked(int type) {
+                if(type==0) {
+                    FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                    fragmentTransaction.replace(R.id.Frgment_Container, addnewdonationfragment);
+                    fragmentTransaction.addToBackStack(null);
+
+                    fragmentTransaction.commit();
+                }
+
+            }
+        });
     }
 
     @Override
@@ -52,46 +71,57 @@ public class HomeActivity extends AppCompatActivity
         }
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.home, menu);
-        return true;
-    }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+
+
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.Nav_Home) {
+            MainHomeFragment mainHomeFragment=new MainHomeFragment();
+            fragmentTransaction.replace(R.id.Frgment_Container, mainHomeFragment);
+            fragmentTransaction.commit();
+
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.nav_AboutUs) {
 
-        } else if (id == R.id.nav_slideshow) {
 
-        } else if (id == R.id.nav_manage) {
 
-        } else if (id == R.id.nav_share) {
+        } else if (id == R.id.nav_Profile) {
+            ProfileFragment profileFragment=new ProfileFragment();
+            fragmentTransaction.replace(R.id.Frgment_Container, profileFragment);
+            fragmentTransaction.commit();
 
-        } else if (id == R.id.nav_send) {
 
+        } else if (id == R.id.nav_Setting) {
+            SettingFragment settingFragment=new SettingFragment();
+            fragmentTransaction.replace(R.id.Frgment_Container,settingFragment);
+            fragmentTransaction.commit();
+
+        } else if (id == R.id.nav_Sponsers) {
+            addnewdonationFragment addnewdonationFragment=new addnewdonationFragment();
+            fragmentTransaction.replace(R.id.Frgment_Container, addnewdonationFragment);
+            fragmentTransaction.commit();
+
+
+        } else if (id == R.id.nav_ContactUs) {
+            ContactUSFragment contactUSFragment=new ContactUSFragment();
+            fragmentTransaction.replace(R.id.Frgment_Container,contactUSFragment);
+            fragmentTransaction.commit();
+
+        } else if (id == R.id.nav_Suggestion) {
+            SuggestionFragment suggestionFragment=new SuggestionFragment();
+            fragmentTransaction.replace(R.id.Frgment_Container, suggestionFragment);
+            fragmentTransaction.commit();
+
+        } else if (id == R.id.nav_Exit) {
+            finish();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
