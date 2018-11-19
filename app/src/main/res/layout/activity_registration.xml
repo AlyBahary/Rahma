@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
+    android:background="@color/white"
     tools:context=".RegistrationsTypeActivity">
 
     <LinearLayout
@@ -23,7 +24,8 @@
                 android:layout_height="wrap_content"
                 android:background="@color/scrollbarbg"
                 android:orientation="vertical"
-                android:padding="10dp">
+                android:padding="10dp"
+                android:id="@+id/scrolbarbg">
 
                 <TextView
                     android:id="@+id/scrollingtext"
@@ -40,7 +42,7 @@
                     android:text="وَتَعَاوَنُوا عَلَى الْبِرِّ وَالتَّقْوَىٰ ۖ وَلَا تَعَاوَنُوا عَلَى الْإِثْمِ وَالْعُدْوَانِ ۚ وَاتَّقُوا اللَّهَ ۖ.com/"
                     android:textColor="@color/white"
                     android:textDirection="anyRtl"
-                    android:textSize="20sp" />
+                    android:textSize="18sp" />
                 />
             </LinearLayout>
 
@@ -54,8 +56,8 @@
             android:layout_marginRight="30dp"
             android:layout_marginTop="-90dp"
             android:background="@color/white"
-            app:cardCornerRadius="2dp"
-            app:cardElevation="10dp">
+            app:cardCornerRadius="6dp"
+            app:cardElevation="7dp">
 
 
             <LinearLayout
@@ -81,7 +83,9 @@
                     android:layout_height="wrap_content"
                     android:background="@null"
                     android:hint="@string/loginhintname"
+                    android:id="@+id/RegistratioName"
                     android:inputType="textPersonName"
+                    android:textSize="14sp"
                     android:layoutDirection="ltr"
                     android:padding="10dp"
                     android:textDirection="ltr" />
@@ -110,6 +114,8 @@
                     android:layout_height="wrap_content"
                     android:background="@null"
                     android:hint="@string/Phoneunmberhint"
+                    android:textSize="14sp"
+                    android:id="@+id/RegistratioNumber"
                     android:inputType="number"
                     android:layoutDirection="ltr"
                     android:padding="10dp"
@@ -138,14 +144,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@null"
+                    android:textSize="14sp"
                     android:hint="@string/EmailHint"
+                    android:id="@+id/RegistrationEmail"
                     android:inputType="textEmailAddress"
                     android:layoutDirection="ltr"
                     android:padding="10dp"
                     android:textDirection="ltr" />
             </LinearLayout>
 
-            <LinearLayout
+            <!--<LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="0dp"
@@ -171,6 +179,7 @@
                     android:layout_weight="2"
                     android:background="@null"
                     android:hint="@string/locationhint"
+                    android:id="@+id/RegistratioLocatio"
                     android:inputType="textPassword"
                     android:layoutDirection="ltr"
                     android:padding="10dp"
@@ -182,10 +191,41 @@
                     android:layout_weight="1"
                     android:src="@drawable/arrow" />
             </LinearLayout>
+-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="310dp"
+                android:background="@drawable/bottom_shadow"
+                android:elevation="5dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/password" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="@string/loginhintpassword"
+                    android:textSize="14sp"
+                    android:id="@+id/RegistratioPass"
+                    android:inputType="textPassword"
+                    android:layoutDirection="ltr"
+                    android:padding="10dp"
+                    android:textDirection="ltr" />
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
                 android:layout_marginTop="380dp"
                 android:background="@drawable/bottom_shadow"
                 android:elevation="5dp"
@@ -204,76 +244,21 @@
                     android:layout_height="wrap_content"
                     android:background="@null"
                     android:hint="@string/loginhintpassword"
-                    android:inputType="text"
-                    android:layoutDirection="ltr"
-                    android:padding="10dp"
-                    android:textDirection="ltr" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="0dp"
-                android:layout_marginRight="0dp"
-                android:layout_marginTop="450dp"
-                android:background="@drawable/bottom_shadow"
-                android:elevation="5dp"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:paddingLeft="30dp"
-                android:paddingRight="30dp">
-
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:src="@drawable/password" />
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@null"
-                    android:hint="@string/loginhintpassword"
+                    android:textSize="14sp"
+                    android:id="@+id/RegistratioRePass"
                     android:inputType="textPassword"
                     android:layoutDirection="ltr"
                     android:padding="10dp"
                     android:textDirection="ltr" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="0dp"
-                android:layout_marginRight="0dp"
-                android:layout_marginTop="450dp"
-                android:background="@drawable/bottom_shadow"
-                android:elevation="5dp"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:paddingLeft="30dp"
-                android:paddingRight="30dp">
-
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:src="@drawable/password" />
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@null"
-                    android:hint="@string/loginhintpassword"
-                    android:inputType="textPassword"
-                    android:layoutDirection="ltr"
-                    android:padding="10dp"
-                    android:textDirection="ltr" />
-            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_marginLeft="20dp"
-                android:layout_marginTop="520dp"
+                android:layout_marginTop="450dp"
                 android:padding="10dp"
                 android:id="@+id/Login"
                 >
@@ -294,14 +279,14 @@
 
             <Button
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="70dp"
                 android:layout_marginBottom="40dp"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
-                android:layout_marginTop="600dp"
-                android:background="@drawable/button"
-                android:elevation="30dp"
+                android:layout_marginTop="530dp"
+                android:background="@drawable/button1"
                 android:text="@string/Enter"
+                android:id="@+id/RegistrationButton"
                 android:textAllCaps="false"
                 android:textColor="@color/white" />
 
