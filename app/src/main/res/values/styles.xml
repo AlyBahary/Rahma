@@ -30,6 +30,8 @@
         <item name="android:actionBarStyle">@style/TransparentActionBar</item>
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
     </style>
 
     <style name="TransparentActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">

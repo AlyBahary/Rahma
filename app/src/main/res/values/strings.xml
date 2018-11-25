@@ -65,7 +65,7 @@
     <string name="DonationDetails">Donation Details</string>
     <string name="DonationDescribtion">Donation Describtion</string>
     <string name="ReciveDonation">Recive Donation</string>
-    <string name="numberExist">This number is exist</string>
+    <string name="numberExist">This number or Email is exist </string>
     <string name="namePlease">Please enter your name</string>
     <string name="emailPlease">Please Enter your Email</string>
     <string name="passPlease">Please Enter your Password</string>
@@ -82,8 +82,58 @@
     <string name="Wtritefloorhere">Write floor number here</string>
     <string name="WtriteHomehere">Write home number here</string>
     <string name="Add">Add</string>
-    <string name="Home">Home</string>
+    <string name="Home">House</string>
     <string name="Block">Block</string>
     <string name="Cancell">Cancel</string>
+    <string name="ChooseAdrees">Choose Adress Please</string>
+    <string name="Block_type">Place type</string>
+    <string name="LocationDescribtion">Location Description</string>
+    <string name="ConatctNumber">Contact Number</string>
+    <string name="WriteConatctNumber">Write Contact Number Here</string>
+    <string name="BlockNo">Block Number</string>
+    <string name="WriteblockNoHere">Write Block no here</string>
+    <string name="PartmentNo">Partment Number</string>
+    <string name="WtritePartmentNohere">Write Partment Number here</string>
+    <string name="organizationNo">Organization Number</string>
+    <string name="organizationName">Organization Name</string>
+    <string name="WtriteOrganizationNohere">Write Organziation Number Here</string>
+    <string name="WtriteOrganizationNamehere">Write Organziation Name Here</string>
+    <string name="SelectAdress">Select Adress</string>
+    <string name="Quatity">Quantity</string>
+    <string name="CurrentLocatio">Current location</string>
+    <string name="DonationType">Donation Type</string>
+    <string name="DonationQuantity">Donation Quantity</string>
+    <string name="More">More</string>
+    <string name="iwantit">I want it</string>
+    <string name="locationtype">Location Type</string>
+    <string name="Deliver">Deliver</string>
+    <string name="AddnewEmployee">Add New Empoyee</string>
+    <string name="EmployeeList">Empolyees List</string>
+    <string name="EmloyeeList">Employee List</string>
+    <string name="SelectLanguage">Select Language</string>
+    <string name="Arabic">العربية</string>
+    <string name="Ennglish">English</string>
+    <string name="Alert">Alert</string>
+    <string name="LanguageMessage">Are you sure you want to Change Language ?</string>
+    <string name="yes">yes</string>
+    <string name="AlertMSG">Please do not disturb the donor and just take donate Displayed only</string>
+    <string name="Confirm">Confirm</string>
+    <string name="didntwant">I didn\'t want it</string>
+    <string name="ReportComplete">Report Complete</string>
+    <string name="PostDeleted">Post Deleted</string>
+    <string name="EnoughforoneFamilyDonationReferedByyou">Enough for one Family Donation Refered By You</string>
+    <string name="EnoughforMoreFamilyDonationReferedByyou">Enough For More Than Family Donation Referred By you</string>
+    <string name="YourEnoughForOneFamilyDoation">Your Enough For One Family Doation</string>
+    <string name="Quran">
+وَتَعَاوَنُوا عَلَى الْبِرِّ وَالتَّقْوَىٰ ۖ وَلَا تَعَاوَنُوا عَلَى الْإِثْمِ وَالْعُدْوَانِ ۚ وَاتَّقُوا اللَّهَ ۖ إِنَّ اللَّهَ شَدِيدُ الْعِقَابِ  \u0020\u0020\u0020\u0020\u0020 \u0020\u0020\u0020\u0020\u0020 \u0020\u0020\u0020\u0020\u0020  \u0020\u0020\u0020\u0020\u0020 \u0020\u0020\u0020\u0020\u0020 \u0020\u0020\u0020\u0020\u0020 وَتَعَاوَنُوا عَلَى الْبِرِّ وَالتَّقْوَىٰ ۖ وَلَا تَعَاوَنُوا عَلَى الْإِثْمِ وَالْعُدْوَانِ ۚ وَاتَّقُوا اللَّهَ ۖ إِنَّ اللَّهَ شَدِيدُ  الْعِقَابِِ</string>
+    <string name="LoadDonations">Load Donations..</string>
+    <string name="Donation">Donation</string>
+
+    <string-array name="Block_type">
+        <item>@string/Home</item>
+        <item>@string/Block</item>
+        <item>@string/organization</item>
+
+    </string-array>
 
 </resources>

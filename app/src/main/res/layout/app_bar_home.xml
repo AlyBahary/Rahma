@@ -7,19 +7,20 @@
     android:orientation="vertical"
     tools:context=".HomeActivity">
 
-    <android.support.design.widget.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <android.support.design.widget.AppBarLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/APPBAR"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:elevation="0dp">
+        app:elevation="0dp">
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@drawable/toolbar_bg1"
-            android:elevation="0dp">
+            app:elevation="0dp">
 
 
             <LinearLayout
@@ -38,9 +39,9 @@
 
                     <ImageView
                         android:id="@+id/toolbarMenu"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="3"
+                        android:layout_weight="1"
                         android:src="@drawable/menu" />
 
                     <View
@@ -65,7 +66,7 @@
                         android:gravity="center"
                         android:text="TITLLE"
                         android:textColor="@color/white"
-                        android:textSize="18sp" />
+                        android:textSize="16sp" />
 
                     <AutoCompleteTextView
                         android:id="@+id/input_search"
@@ -85,23 +86,27 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:gravity="center"
                     android:orientation="horizontal">
 
                     <ImageView
                         android:id="@+id/toolbarshare"
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_weight="2"
-                        android:gravity="center|right"
-                        android:src="@drawable/share" />
+                        android:gravity="right"
+                        android:layout_gravity="right"
+                        android:foregroundGravity="right"
+                        android:src="@drawable/ic_share_black_24dp" />
 
                     <ImageView
                         android:id="@+id/toolbarback"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:layout_gravity="right"
+                        android:foregroundGravity="right"
                         android:layout_weight="2"
-                        android:src="@drawable/back" />
+                        android:src="@drawable/ic_navigate_next_black_24dp" />
 
 
                     <View
@@ -120,6 +125,8 @@
     </android.support.design.widget.AppBarLayout>
 
     <include layout="@layout/content_home" />
+
+
 
 
 </LinearLayout>

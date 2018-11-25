@@ -4,116 +4,128 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="center"
     android:background="@drawable/bg_sidebar"
     android:fillViewport="true"
     android:orientation="vertical"
     tools:context=".RegistrationsTypeActivity">
 
-  <!--  <include
-        android:id="@+id/app_bar"
-        layout="@layout/custom_tool_bar" />
--->
-    <ScrollView
+    <!--  <include
+          android:id="@+id/app_bar"
+          layout="@layout/custom_tool_bar" />
+  -->
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fillViewport="true"
-        >
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/scrolbarbg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/scrollbarbg"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/scrollingtext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/scrollabletextviewbg"
+                android:ellipsize="marquee"
+                android:gravity="center"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:text="@string/Quran"
+                android:textColor="@color/white"
+                android:textDirection="anyRtl"
+                android:textSize="16sp" />
+        </LinearLayout>
+        />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/scrollbarbg"
-                android:orientation="vertical"
-                android:id="@+id/scrolbarbg"
-                android:padding="10dp">
-
-                <TextView
-                    android:id="@+id/scrollingtext"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/scrollabletextviewbg"
-                    android:ellipsize="marquee"
-                    android:focusable="true"
-                    android:textSize="16sp"
-                    android:focusableInTouchMode="true"
-                    android:gravity="center"
-                    android:marqueeRepeatLimit="marquee_forever"
-                    android:scrollHorizontally="true"
-                    android:singleLine="true"
-                    android:text="وَتَعَاوَنُوا عَلَى الْبِرِّ وَالتَّقْوَىٰ ۖ وَلَا تَعَاوَنُوا عَلَى الْإِثْمِ وَالْعُدْوَانِ ۚ وَاتَّقُوا اللَّهَ ۖ.com/"
-                    android:textColor="@color/white"
-                    android:textDirection="anyRtl"
-                     />
-                />
-
-            </LinearLayout>
-
 
             <LinearLayout
-                android:id="@+id/MainScreen_CardView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="30dp"
-                android:background="@color/white"
-                android:elevation="2dp">
-
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
 
                 <LinearLayout
+                    android:id="@+id/MainScreen_CardView"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:orientation="vertical"
-                    android:padding="30dp">
+                    android:layout_margin="30dp"
+                    android:background="@color/white"
+                    android:elevation="2dp"
+                    android:gravity="center">
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:layout_gravity="center"
-                        android:layout_marginBottom="60dp"
-                        android:layout_marginLeft="80dp"
-                        android:layout_marginRight="80dp"
-                        android:src="@drawable/logo" />
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="30dp">
+
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="40dp"
+                            android:gravity="center"
+                            android:src="@drawable/logo" />
 
 
-                    <Button
-                        android:id="@+id/MainScreen_Button_Donor"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="20dp"
-                        android:background="@drawable/homebutton"
-                        android:text="@string/Donor"
-                        android:textAllCaps="false"
-                        android:textColor="@color/white" />
+                        <Button
+                            android:id="@+id/MainScreen_Button_Donor"
+                            android:layout_width="220dp"
+                            android:layout_height="50dp"
+                            android:layout_marginBottom="20dp"
+                            android:background="@drawable/homebutton"
+                            android:text="@string/Donor"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white" />
 
-                    <Button
-                        android:id="@+id/MainScreen_Button_Beneficiary"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="20dp"
-                        android:background="@drawable/homebutton"
-                        android:text="@string/Beneficiary"
-                        android:textAllCaps="false"
-                        android:textColor="@color/white" />
+                        <Button
+                            android:id="@+id/MainScreen_Button_Beneficiary"
+                            android:layout_width="220dp"
+                            android:layout_height="50dp"
+                            android:layout_marginBottom="20dp"
+                            android:background="@drawable/homebutton"
+                            android:text="@string/Beneficiary"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white" />
 
-                    <Button
-                        android:id="@+id/MainScreen_Button_Organization"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="20dp"
-                        android:background="@drawable/homebutton"
-                        android:text="@string/organization"
-                        android:textAllCaps="false"
-                        android:textColor="@color/white" />
+                        <Button
+                            android:id="@+id/MainScreen_Button_Organization"
+                            android:layout_width="220dp"
+                            android:layout_height="50dp"
+                            android:layout_marginBottom="20dp"
+                            android:background="@drawable/homebutton"
+                            android:text="@string/organization"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+
                 </LinearLayout>
-
 
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
-
 
 </LinearLayout>

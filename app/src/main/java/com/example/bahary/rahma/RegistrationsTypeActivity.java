@@ -18,13 +18,18 @@ public class RegistrationsTypeActivity extends AppCompatActivity {
     LinearLayout mCardView;
     LinearLayout scrolbarbgLayout;
     Button DonorButton, OrgButton, BeneButton;
-
+    String L;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if(Hawk.contains(Constants.Language)){
+            L=Hawk.get(Constants.Language);
+            Constants.languageChange(L+"",RegistrationsTypeActivity.this);
+
+        }
         setContentView(R.layout.activity_registrations_type);
-        Hawk.init(this).build();
+        //Hawk.init(this).build();
         scrolbarbgLayout=findViewById(R.id.scrolbarbg);
         scrollingText = (TextView) findViewById(R.id.scrollingtext);
         mCardView = findViewById(R.id.MainScreen_CardView);

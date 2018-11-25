@@ -4,6 +4,7 @@ package com.example.bahary.rahma.HomeFragments;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.GridLayoutManager;
@@ -53,6 +54,8 @@ public class MainHomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_main_home, container, false);
+        BottomNavigationView bottomNavigationView=getActivity().findViewById(R.id.navigation);
+        bottomNavigationView.setVisibility(View.VISIBLE);
 
         menu = getActivity().findViewById(R.id.toolbarMenu);
         Title = getActivity().findViewById(R.id.toolbarTitle);
@@ -154,7 +157,7 @@ public class MainHomeFragment extends Fragment {
                     break;
             }
 
-            sliderView.setImageScaleType(ImageView.ScaleType.FIT_CENTER);
+            sliderView.setImageScaleType(ImageView.ScaleType.FIT_XY);
             sliderView.setDescription("setDescription " + (i + 1));
             final int finalI = i;
             sliderView.setOnSliderClickListener(new SliderView.OnSliderClickListener() {

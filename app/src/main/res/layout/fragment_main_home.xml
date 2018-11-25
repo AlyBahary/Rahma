@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".HomeFragments.MainHomeFragment">
+    tools:context=".HomeFragments.MainHomeFragment"
+    android:layout_marginBottom="50dp">
 
     <!-- TODO: Update blank fragment layout -->
     <ScrollView
@@ -18,18 +19,13 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="250dp"
-                android:background="@drawable/bg_edited"
-                android:orientation="vertical">
 
-                <com.smarteist.autoimageslider.SliderLayout
-                    android:id="@+id/imageSliderHomeFragment"
-                    android:layout_width="match_parent"
-                    android:layout_height="250dp"
-                    android:layout_alignParentTop="true" />
-            </LinearLayout>
+            <com.smarteist.autoimageslider.SliderLayout
+                android:id="@+id/imageSliderHomeFragment"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:layout_height="220dp"
+                />
 
 
             <android.support.v7.widget.RecyclerView
@@ -37,10 +33,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="20dp"
-                android:padding="20dp"
                 android:layout_marginBottom="50dp"
-                android:background="@color/white">
+                android:background="@color/white"
+                android:paddingTop="20dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="20dp">
 
             </android.support.v7.widget.RecyclerView>
         </LinearLayout>

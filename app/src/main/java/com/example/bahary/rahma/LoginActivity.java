@@ -1,5 +1,6 @@
 package com.example.bahary.rahma;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -32,6 +33,8 @@ public class LoginActivity extends AppCompatActivity {
     TextView mScrollableTextView;
     TextView forgetpass;
     public static final String TAG = "LOGIN";
+    ProgressDialog pd;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,10 +59,13 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //LoginConnection("01272346389", "123456");
-
+                pd = new ProgressDialog(LoginActivity.this);
+                pd.setMessage("loading");
+                pd.show();
                 Name = usenameEditText.getText().toString();
                 Pass = passwordEditText.getText().toString();
                 if (Name.equals("") || Name.equals(null)) {
+                    pd.dismiss();
                     View parentLayout = findViewById(android.R.id.content);
                     Snackbar.make(parentLayout, "" + getString(R.string.emailPlease), Snackbar.LENGTH_LONG)
                             .setAction("CLOSE", new View.OnClickListener() {
@@ -71,6 +77,8 @@ public class LoginActivity extends AppCompatActivity {
                             .show();
 
                 } else if (Pass.equals("") || Pass.equals(null)) {
+                    pd.dismiss();
+
 
                     View parentLayout = findViewById(android.R.id.content);
                     Snackbar.make(parentLayout, "" + getString(R.string.passPlease), Snackbar.LENGTH_LONG)
@@ -110,7 +118,7 @@ public class LoginActivity extends AppCompatActivity {
         getRegistrationsConnectionServices.login(name, pass).enqueue(new Callback<LoginModel>() {
             @Override
             public void onResponse(Call<LoginModel> call, Response<LoginModel> response) {
-
+                pd.dismiss();
                 LoginModel loginModel = response.body();
                 Boolean x = loginModel.getStatus();
 
@@ -119,11 +127,12 @@ public class LoginActivity extends AppCompatActivity {
                     Intent i = new Intent(LoginActivity.this, HomeActivity.class);
                     Hawk.put(Constants.UserRole, loginModel.getUser().getRole());
                     Hawk.put(Constants.UserName, loginModel.getUser().getUsername());
+                    Hawk.put(Constants.USerID, loginModel.getUser().getId());
                     Hawk.put(Constants.Name, loginModel.getUser().getName());
                     Hawk.put(Constants.Mobile, loginModel.getUser().getMobile());
-                    Hawk.put(Constants.USerID, loginModel.getUser().getId());
                     Hawk.put(Constants.UserCityID, loginModel.getUser().getCityId());
                     Hawk.put(Constants.UserOrganzationID, loginModel.getUser().getOrganizationId());
+                    Hawk.put(Constants.User_Exist,"1");
                     //Hawk.put(Constants.Email,loginModel.getUser().get());
                     startActivity(i);
 
@@ -142,6 +151,7 @@ public class LoginActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<LoginModel> call, Throwable t) {
+                pd.dismiss();
                 View parentLayout = findViewById(android.R.id.content);
                 Snackbar.make(parentLayout, "" + getString(R.string.SomethingWrong), Snackbar.LENGTH_LONG)
                         .setAction("CLOSE", new View.OnClickListener() {

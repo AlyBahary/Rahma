@@ -27,6 +27,7 @@ import com.example.bahary.rahma.NavFragments.SettingFragment;
 import com.example.bahary.rahma.NavFragments.SponserFragment;
 import com.example.bahary.rahma.NavFragments.SuggestionFragment;
 import com.example.bahary.rahma.NavFragments.ProfileFragment;
+import com.example.bahary.rahma.Organization.Organiztion_Main_fragment;
 import com.example.bahary.rahma.Utils.Constants;
 import com.orhanobut.hawk.Hawk;
 
@@ -38,6 +39,7 @@ public class HomeActivity extends AppCompatActivity
     MainHomeFragment mainHomeFragment;
     ReciveDonationFragment reciveDonationFragment;
     MapFragment mapFragment;
+    Organiztion_Main_fragment organiztion_main_fragment;
     String type;
     ImageView menu, Share,Back;
     TextView Title;
@@ -62,18 +64,25 @@ public class HomeActivity extends AppCompatActivity
         mainHomeFragment = new MainHomeFragment();
         reciveDonationFragment = new ReciveDonationFragment();
         mapFragment = new MapFragment();
+        organiztion_main_fragment = new Organiztion_Main_fragment();
 
-        if (!type.equals(Constants.Beneficiary)) {
+        if (type.equals(Constants.Donor)) {
             FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.Frgment_Container, mainHomeFragment);
             Title.setText(getString(R.string.Main));
             fragmentTransaction.commit();
-        } else {
-
+        } else if(type.equals(Constants.Beneficiary)) {
             FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.Frgment_Container, mapFragment);
             Title.setText(getString(R.string.Map));
             fragmentTransaction.commit();
+        }
+        else {
+            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.Frgment_Container, organiztion_main_fragment);
+            Title.setText(getString(R.string.Map));
+            fragmentTransaction.commit();
+
         }
 
         final DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -117,6 +126,10 @@ public class HomeActivity extends AppCompatActivity
             drawer.closeDrawer(GravityCompat.START);
         } else {
             super.onBackPressed();
+            if(Hawk.contains(Constants.DonationDetailsTOEdit)){
+                Hawk.delete(Constants.DonationDetailsTOEdit);
+            }
+
         }
     }
 
@@ -130,14 +143,20 @@ public class HomeActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.Nav_Home) {
-            if (!type.equals(Constants.Beneficiary)) {
+            if (type.equals(Constants.Donor)) {
                 fragmentTransaction.replace(R.id.Frgment_Container, mainHomeFragment);
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
-            } else {
+            } else if(type.equals(Constants.Beneficiary)) {
                 fragmentTransaction.replace(R.id.Frgment_Container, mapFragment);
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
+            }
+            else{
+                fragmentTransaction.replace(R.id.Frgment_Container, organiztion_main_fragment);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
+
             }
 
 
@@ -183,7 +202,11 @@ public class HomeActivity extends AppCompatActivity
             fragmentTransaction.commit();
 
         } else if (id == R.id.nav_Exit) {
+            Hawk.delete(Constants.User_Exist);
+            Intent i =new Intent(HomeActivity.this,RegistrationsTypeActivity.class);
+            startActivity(i);
             finish();
+
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
