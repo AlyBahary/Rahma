@@ -39,8 +39,9 @@
 
                     <ImageView
                         android:id="@+id/toolbarMenu"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="13dp"
                         android:layout_weight="1"
                         android:src="@drawable/menu" />
 
@@ -90,9 +91,10 @@
 
                     <ImageView
                         android:id="@+id/toolbarshare"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:layout_weight="2"
+                        android:padding="12dp"
                         android:gravity="right"
                         android:layout_gravity="right"
                         android:foregroundGravity="right"
@@ -100,8 +102,9 @@
 
                     <ImageView
                         android:id="@+id/toolbarback"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="8dp"
                         android:gravity="right"
                         android:layout_gravity="right"
                         android:foregroundGravity="right"

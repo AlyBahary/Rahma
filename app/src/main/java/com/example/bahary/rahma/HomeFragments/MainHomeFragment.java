@@ -4,6 +4,7 @@ package com.example.bahary.rahma.HomeFragments;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -11,24 +12,46 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.daimajia.slider.library.Animations.DescriptionAnimation;
+import com.daimajia.slider.library.Indicators.PagerIndicator;
+import com.daimajia.slider.library.SliderLayout;
+import com.daimajia.slider.library.SliderTypes.BaseSliderView;
+import com.daimajia.slider.library.SliderTypes.TextSliderView;
+import com.esafirm.imagepicker.model.Image;
 import com.example.bahary.rahma.HomeActivity;
+import com.example.bahary.rahma.Models.AllSlidersModel.AllSliderModel;
+import com.example.bahary.rahma.Models.GetImagesURLModel;
 import com.example.bahary.rahma.Models.HomeItemModel;
+import com.example.bahary.rahma.Models.UserData.UserDataModel;
 import com.example.bahary.rahma.NavFragments.SettingFragment;
 import com.example.bahary.rahma.R;
 import com.example.bahary.rahma.RecyclerView.HomeItemsAdapter;
+import com.example.bahary.rahma.Utils.Connectors;
 import com.example.bahary.rahma.Utils.Constants;
-import com.smarteist.autoimageslider.SliderLayout;
-import com.smarteist.autoimageslider.SliderView;
+import com.google.gson.Gson;
+import com.orhanobut.hawk.Hawk;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+
+import ir.apend.slider.model.Slide;
+import ir.apend.slider.ui.Slider;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -39,10 +62,12 @@ public class MainHomeFragment extends Fragment {
     private RecyclerView RV;
     private HomeItemsAdapter mItemsAdapter;
     private ArrayList<HomeItemModel> mhomeItemModels;
-    private SliderLayout sliderLayout;
+    // private SliderLayout sliderLayout;
     ImageView menu, Share, Back;
-    TextView Title;
-
+    TextView Title, Accounttype;
+    private SliderLayout mDemoSlider;
+    String T;
+    HashMap<String, String> url_maps;
 
     public MainHomeFragment() {
         // Required empty public constructor
@@ -54,8 +79,24 @@ public class MainHomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_main_home, container, false);
-        BottomNavigationView bottomNavigationView=getActivity().findViewById(R.id.navigation);
+        //
+        mDemoSlider = (SliderLayout) view.findViewById(R.id.slider);
+        url_maps = new HashMap<String, String>();
+
+
+        //
+        final BottomNavigationView bottomNavigationView = getActivity().findViewById(R.id.navigation);
         bottomNavigationView.setVisibility(View.VISIBLE);
+        bottomNavigationView.setSelected(false);
+        bottomNavigationView.getMenu().getItem(0).setCheckable(false);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                return false;
+
+            }
+        });
+
 
         menu = getActivity().findViewById(R.id.toolbarMenu);
         Title = getActivity().findViewById(R.id.toolbarTitle);
@@ -66,13 +107,14 @@ public class MainHomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 //getActivity().getFragmentManager().popBackStack();
-                HomeActivity homeActivity=new HomeActivity();
+                HomeActivity homeActivity = new HomeActivity();
                 homeActivity.onBackPressed();
 
             }
         });
         Title.setText(getString(R.string.Main));
 
+        get_home_sliders();
         mhomeItemModels = new ArrayList<>();
         mhomeItemModels.add(new HomeItemModel(0, getContext().getString(R.string.addDonation)));
         mhomeItemModels.add(new HomeItemModel(1, getContext().getString(R.string.addressList)));
@@ -89,7 +131,6 @@ public class MainHomeFragment extends Fragment {
                     fragmentTransaction.replace(R.id.Frgment_Container, addnewdonationfragment);
                     fragmentTransaction.addToBackStack(null);
                     fragmentTransaction.commit();
-
 
 
                 } else if (position == 1) {
@@ -126,59 +167,106 @@ public class MainHomeFragment extends Fragment {
         RV.setLayoutManager(new GridLayoutManager(getContext(), 2));
         mItemsAdapter.notifyDataSetChanged();
 ////setup Slider
-        sliderLayout = view.findViewById(R.id.imageSliderHomeFragment);
+      /*  sliderLayout = view.findViewById(R.id.imageSliderHomeFragment);
         sliderLayout.setIndicatorAnimation(SliderLayout.Animations.FILL); //set indicator animation by using SliderLayout.Animations. :WORM or THIN_WORM or COLOR or DROP or FILL or NONE or SCALE or SCALE_DOWN or SLIDE and SWAP!!
         sliderLayout.setScrollTimeInSec(3); //set scroll delay in seconds :
-        setSliderViews();
-
+*/
         return view;
     }
 
 
-    private void setSliderViews() {
+   /* private void setSliderViews(ArrayList<String> sliderViewsArraylist, ArrayList<String> SliderDesc) {
 
-        for (int i = 0; i <= 3; i++) {
+        for (int i = 0; i < sliderViewsArraylist.size(); i++) {
 
             SliderView sliderView = new SliderView(getContext());
+            if (i == i) {
+                sliderView.setImageUrl(sliderViewsArraylist.get(i).replaceFirst("s", ""));
+                sliderView.setDescription(SliderDesc.get(i));
 
-            switch (i) {
-                case 0:
-                    sliderView.setImageDrawable(R.drawable.photo);
-                    break;
-                case 1:
-                    sliderView.setImageDrawable(R.drawable.photo);
-                    break;
-                case 2:
-                    sliderView.setImageDrawable(R.drawable.photo);
-
-                    break;
-                case 3:
-                    sliderView.setImageDrawable(R.drawable.photo);
-                    break;
             }
 
             sliderView.setImageScaleType(ImageView.ScaleType.FIT_XY);
-            sliderView.setDescription("setDescription " + (i + 1));
-            final int finalI = i;
-            sliderView.setOnSliderClickListener(new SliderView.OnSliderClickListener() {
-                @Override
-                public void onSliderClick(SliderView sliderView) {
-                }
-            });
+
 
             //at last add this view in your layout :
             sliderLayout.addSliderView(sliderView);
+
         }
     }
+*/
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        List <Fragment> fragments = getChildFragmentManager().getFragments();
-        if(fragments != null){
-            for(Fragment fragment : fragments){
+        List<Fragment> fragments = getChildFragmentManager().getFragments();
+        if (fragments != null) {
+            for (Fragment fragment : fragments) {
                 fragment.onActivityResult(requestCode, resultCode, data);
             }
         }
+    }
+
+    private void get_home_sliders() {
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(Connectors.getRegistrationsConnectionServices.BaseURL)
+                .addConverterFactory(GsonConverterFactory
+                        .create(new Gson())).build();
+        Connectors.getRegistrationsConnectionServices getRegistrationsConnectionServices =
+                retrofit.create(Connectors.getRegistrationsConnectionServices.class);
+        getRegistrationsConnectionServices.get_home_sliders().enqueue(new Callback<AllSliderModel>() {
+            @Override
+            public void onResponse(Call<AllSliderModel> call, Response<AllSliderModel> response) {
+
+                AllSliderModel allSliderModel = response.body();
+                if (allSliderModel.getStatus()) {
+                    ArrayList<String> Title = new ArrayList<>();
+                    for (int i = 0; i < allSliderModel.getSliders().size(); i++) {
+                        T = allSliderModel.getSliders().get(i).getNameAr();
+                       /* if (Title.contains(T)) {
+                            Title.add(T+i);
+                            T+=i;
+                            }else{
+                            Title.add(T);
+
+                        }*/
+
+                        url_maps.put( "http://www.rahma-app.com/rahma/prod_img/" + allSliderModel.getSliders().get(i).getImage(),T);
+
+                    }
+                    for (String name : url_maps.keySet()) {
+                        TextSliderView textSliderView = new TextSliderView(getContext());
+                        // initialize a SliderLayout
+                        textSliderView
+                                .description(url_maps.get(name))
+                                .image(name)
+                                .setScaleType(BaseSliderView.ScaleType.Fit);
+                        //add your extra information
+                        textSliderView.bundle(new Bundle());
+                        textSliderView.getBundle()
+                                .putString("extra", name);
+
+                        mDemoSlider.addSlider(textSliderView);
+                    }
+                    mDemoSlider.setPresetTransformer(SliderLayout.Transformer.Default);
+                    mDemoSlider.setPresetIndicator(SliderLayout.PresetIndicators.Center_Bottom);
+                    mDemoSlider.setIndicatorVisibility(PagerIndicator.IndicatorVisibility.Visible);
+                    mDemoSlider.setCustomAnimation(new DescriptionAnimation());
+                    mDemoSlider.setDuration(3000);
+
+
+                    //setSliderViews(IMGs, Descs);
+
+                }
+
+
+            }
+
+            @Override
+            public void onFailure(Call<AllSliderModel> call, Throwable t) {
+
+            }
+        });
+
     }
 }

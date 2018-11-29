@@ -16,7 +16,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="300dp"
+            android:layout_height="230dp"
             android:background="@drawable/bg_edited"
             android:orientation="vertical">
 
@@ -39,7 +39,7 @@
                     android:singleLine="true"
                     android:text="@string/Quran"
                     android:textColor="@color/white"
-                    android:textDirection="anyRtl"
+
                     android:textSize="18sp" />
                 />
             </LinearLayout>
@@ -52,7 +52,8 @@
             android:layout_marginBottom="30dp"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
-            android:layout_marginTop="-90dp"
+
+            android:layout_marginTop="-100dp"
             android:background="@color/white"
             app:cardCornerRadius="6dp"
             app:cardElevation="7dp">
@@ -65,11 +66,13 @@
                 android:layout_marginRight="0dp"
                 android:layout_marginTop="100dp"
                 android:background="@drawable/bottom_shadow"
-                android:elevation="5dp"
+                android:elevation="3dp"
                 android:gravity="center"
+                android:layoutDirection="ltr"
                 android:orientation="horizontal"
                 android:paddingLeft="30dp"
-                android:paddingRight="30dp">
+                android:paddingRight="30dp"
+                android:textDirection="ltr">
 
                 <ImageView
                     android:layout_width="20dp"
@@ -81,8 +84,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@null"
+                    android:focusable="true"
                     android:hint="@string/Phoneunmberhint"
                     android:inputType="phone"
+                    android:layoutDirection="ltr"
                     android:padding="10dp"
                     android:textDirection="ltr"
                     android:textSize="14sp" />
@@ -93,13 +98,15 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="0dp"
                 android:layout_marginRight="0dp"
-                android:layout_marginTop="170dp"
+                android:layout_marginTop="150dp"
                 android:background="@drawable/bottom_shadow"
-                android:elevation="5dp"
+                android:elevation="3dp"
                 android:gravity="center"
+                android:layoutDirection="ltr"
                 android:orientation="horizontal"
                 android:paddingLeft="30dp"
-                android:paddingRight="30dp">
+                android:paddingRight="30dp"
+                android:textDirection="ltr">
 
                 <ImageView
                     android:layout_width="20dp"
@@ -121,12 +128,22 @@
 
 
             <TextView
+                android:id="@+id/login_Registration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="200dp"
+                android:padding="10dp"
+                android:text="@string/CreateNewAccount" />
+
+            <TextView
                 android:id="@+id/login_ForgetPass"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:layout_marginTop="230dp"
+                android:layout_marginTop="240dp"
                 android:padding="10dp"
                 android:text="@string/forgetPass" />
 
@@ -134,10 +151,10 @@
                 android:id="@+id/loginButton"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
-                android:layout_marginBottom="40dp"
+                android:layout_marginBottom="10dp"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
-                android:layout_marginTop="280dp"
+                android:layout_marginTop="310dp"
                 android:background="@drawable/button1"
                 android:text="@string/Enter"
                 android:textAllCaps="false"

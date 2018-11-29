@@ -21,6 +21,11 @@
 
     </style>
 
+    <style name="Spinner" parent="Widget.AppCompat.Light.DropDownItem.Spinner">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/Dark_grey</item>
+        <item name="android:textSize">16sp</item>
+    </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 

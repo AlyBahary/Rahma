@@ -18,6 +18,7 @@ import android.widget.Toast;
 
 import com.example.bahary.rahma.Models.LoginModel;
 import com.example.bahary.rahma.Models.RegistrationModel;
+import com.example.bahary.rahma.Models.RegistrationModels.RegistraionMode;
 import com.example.bahary.rahma.Utils.Connectors;
 import com.example.bahary.rahma.Utils.Constants;
 import com.google.gson.Gson;
@@ -32,8 +33,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class RegistrationActivity extends AppCompatActivity {
     TextView mScrollableTextView;
     LinearLayout goTologinActivity, scrolbarbgLayout;
-    EditText nameEditText, numberEditText, emailEditText, passEditText, repassEditText;
-    String name, number, email, pass, repass;
+    EditText nameEditText, numberEditText, emailEditText, passEditText, repassEditText, PromoCodeEditText;
+    String name, number, email, pass, repass, PromoCode;
     Button Registration;
     public static final String TAG = "REGISTRATIONNN";
     ProgressDialog pd;
@@ -65,6 +66,7 @@ public class RegistrationActivity extends AppCompatActivity {
         passEditText = findViewById(R.id.RegistratioPass);
         Registration = findViewById(R.id.RegistrationButton);
         repassEditText = findViewById(R.id.RegistratioRePass);
+        PromoCodeEditText = findViewById(R.id.PromoCodeEditText);
 
 
         Registration.setOnClickListener(new View.OnClickListener() {
@@ -78,6 +80,8 @@ public class RegistrationActivity extends AppCompatActivity {
                 email = emailEditText.getText().toString();
                 pass = passEditText.getText().toString();
                 repass = repassEditText.getText().toString();
+                PromoCode = PromoCodeEditText.getText().toString();
+
                 if (name.equals("") || name.equals(null)) {
                     pd.dismiss();
                     View parentLayout = findViewById(android.R.id.content);
@@ -151,7 +155,7 @@ public class RegistrationActivity extends AppCompatActivity {
                             , email + ""
                             , number + ""
                             , Hawk.get(Constants.Bundle_Login_Type) + ""
-                            , name + "");
+                            , name + "", PromoCode);
                 }
             }
 
@@ -159,29 +163,36 @@ public class RegistrationActivity extends AppCompatActivity {
 
     }
 
-    private void SingupConnection(String password, String username, String mobile, String role, String name) {
+    private void SingupConnection(String password, String username, String mobile, String role, String name, String PromoCode) {
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(Connectors.getRegistrationsConnectionServices.BaseURL)
                 .addConverterFactory(GsonConverterFactory
                         .create(new Gson())).build();
         Connectors.getRegistrationsConnectionServices getRegistrationsConnectionServices =
                 retrofit.create(Connectors.getRegistrationsConnectionServices.class);
-        getRegistrationsConnectionServices.Signup(password, username, mobile, role, name, "1").enqueue(new Callback<RegistrationModel>() {
+        getRegistrationsConnectionServices.Signup(password, username, mobile, role, name, PromoCode).enqueue(new Callback<RegistraionMode>() {
             @Override
-            public void onResponse(Call<RegistrationModel> call, Response<RegistrationModel> response) {
-                RegistrationModel registrationModel = response.body();
+            public void onResponse(Call<RegistraionMode> call, Response<RegistraionMode> response) {
+                RegistraionMode registrationModel = response.body();
                 Boolean x = registrationModel.getStatus();
                 pd.dismiss();
-                Log.d(TAG, "onResponse: " + registrationModel.getStatus() + registrationModel.getMessage());
                 if (x) {
                     Hawk.put(Constants.UserRole, registrationModel.getUser().getRole());
                     Hawk.put(Constants.UserName, registrationModel.getUser().getUsername());
                     Hawk.put(Constants.USerID, registrationModel.getUser().getId());
                     Hawk.put(Constants.Name, registrationModel.getUser().getName());
                     Hawk.put(Constants.Mobile, registrationModel.getUser().getMobile());
+                    Hawk.put(Constants.UserPromoCode, registrationModel.getUser().getPromocode());
+                    Hawk.put(Constants.User_Exist, "1");
+
                     // Hawk.put(Constants.Mobile, registrationModel.getUser().getType());
                     Intent i = new Intent(RegistrationActivity.this, HomeActivity.class);
                     startActivity(i);
+                    LoginActivity.FinishLogin();
+                    RegistrationsTypeActivity.FinishRegistrationType();
+                    finish();
+
+
                 } else {
                     View parentLayout = findViewById(android.R.id.content);
                     Snackbar.make(parentLayout, "" + getString(R.string.numberExist), Snackbar.LENGTH_LONG)
@@ -200,7 +211,7 @@ public class RegistrationActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onFailure(Call<RegistrationModel> call, Throwable t) {
+            public void onFailure(Call<RegistraionMode> call, Throwable t) {
                 pd.dismiss();
                 View parentLayout = findViewById(android.R.id.content);
                 Snackbar.make(parentLayout, "" + getString(R.string.SomethingWrong), Snackbar.LENGTH_LONG)

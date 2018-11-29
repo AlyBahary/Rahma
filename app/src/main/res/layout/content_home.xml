@@ -14,7 +14,8 @@
         android:layout_height="50dp"
         android:layout_gravity="bottom"
         android:background="?android:attr/windowBackground"
-        app:menu="@menu/navigation" />
+        app:menu="@menu/navigation"
+        app:labelVisibilityMode="labeled"/>
 
 
 </FrameLayout>

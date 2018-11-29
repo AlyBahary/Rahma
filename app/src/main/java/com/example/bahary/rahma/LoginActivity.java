@@ -1,5 +1,6 @@
 package com.example.bahary.rahma;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.design.widget.Snackbar;
@@ -31,19 +32,28 @@ public class LoginActivity extends AppCompatActivity {
     String Name, Pass;
     LinearLayout scrolbarbgLayout;
     TextView mScrollableTextView;
-    TextView forgetpass;
+    TextView forgetpass,login_Registration;
     public static final String TAG = "LOGIN";
     ProgressDialog pd;
+    String L;
+    static Activity loginActivity;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if(Hawk.contains(Constants.Language)){
+            L=Hawk.get(Constants.Language);
+            Constants.languageChange(L+"",LoginActivity.this);
+
+        }
         setContentView(R.layout.activity_login);
+
 
     /*    android.support.v7.widget.Toolbar toolbar = (android.support.v7.widget.Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(toolbar);
 */
+        loginActivity=this;
         scrolbarbgLayout = findViewById(R.id.scrolbarbg);
         mScrollableTextView = findViewById(R.id.scrollingtext);
         mScrollableTextView.setSelected(true);
@@ -54,6 +64,7 @@ public class LoginActivity extends AppCompatActivity {
         usenameEditText = findViewById(R.id.Login_Username);
         passwordEditText = findViewById(R.id.Login_Password);
         forgetpass = findViewById(R.id.login_ForgetPass);
+        login_Registration = findViewById(R.id.login_Registration);
         GologinButton = findViewById(R.id.loginButton);
         GologinButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -106,6 +117,14 @@ public class LoginActivity extends AppCompatActivity {
 
             }
         });
+        login_Registration.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(LoginActivity.this,RegistrationsTypeActivity.class);
+                startActivity(i);
+
+            }
+        });
     }
 
     private void LoginConnection(String name, String pass) {
@@ -131,10 +150,12 @@ public class LoginActivity extends AppCompatActivity {
                     Hawk.put(Constants.Name, loginModel.getUser().getName());
                     Hawk.put(Constants.Mobile, loginModel.getUser().getMobile());
                     Hawk.put(Constants.UserCityID, loginModel.getUser().getCityId());
+                    Hawk.put(Constants.UserPromoCode, loginModel.getUser().getPromocode());
                     Hawk.put(Constants.UserOrganzationID, loginModel.getUser().getOrganizationId());
                     Hawk.put(Constants.User_Exist,"1");
                     //Hawk.put(Constants.Email,loginModel.getUser().get());
                     startActivity(i);
+                    finish();
 
                 } else {
                     View parentLayout = findViewById(android.R.id.content);
@@ -163,5 +184,8 @@ public class LoginActivity extends AppCompatActivity {
                         .show();
             }
         });
+    }
+    public static void FinishLogin(){
+        loginActivity.finish();
     }
 }

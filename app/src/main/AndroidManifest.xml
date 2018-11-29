@@ -61,7 +61,8 @@
         <activity
             android:name=".StuckActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/CustomActionBarTheme"></activity>
+            android:theme="@style/CustomActionBarTheme" />
+        <activity android:name=".ResetPassword"></activity>
     </application>
 
 </manifest>

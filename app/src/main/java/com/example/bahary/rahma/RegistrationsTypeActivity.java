@@ -1,9 +1,11 @@
 package com.example.bahary.rahma;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -18,18 +20,16 @@ public class RegistrationsTypeActivity extends AppCompatActivity {
     LinearLayout mCardView;
     LinearLayout scrolbarbgLayout;
     Button DonorButton, OrgButton, BeneButton;
-    String L;
+    static Activity RegtypeActivity;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if(Hawk.contains(Constants.Language)){
-            L=Hawk.get(Constants.Language);
-            Constants.languageChange(L+"",RegistrationsTypeActivity.this);
 
-        }
         setContentView(R.layout.activity_registrations_type);
         //Hawk.init(this).build();
+        RegtypeActivity=this;
         scrolbarbgLayout=findViewById(R.id.scrolbarbg);
         scrollingText = (TextView) findViewById(R.id.scrollingtext);
         mCardView = findViewById(R.id.MainScreen_CardView);
@@ -49,7 +49,7 @@ public class RegistrationsTypeActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Hawk.put(Constants.UserType, Constants.Donor);
                 Intent LoginActivity = new Intent(RegistrationsTypeActivity.this, RegistrationActivity.class);
-                LoginActivity.putExtra(Constants.Bundle_Login_Type, Constants.Donor);
+                Hawk.put(Constants.Bundle_Login_Type, Constants.Donor);
                 startActivity(LoginActivity);
             }
         });
@@ -58,7 +58,7 @@ public class RegistrationsTypeActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Hawk.put(Constants.UserType, Constants.Beneficiary);
                 Intent LoginActivity = new Intent(RegistrationsTypeActivity.this, RegistrationActivity.class);
-                LoginActivity.putExtra(Constants.Bundle_Login_Type, Constants.Beneficiary);
+                Hawk.put(Constants.Bundle_Login_Type, Constants.Beneficiary);
                 startActivity(LoginActivity);
             }
         });
@@ -67,11 +67,14 @@ public class RegistrationsTypeActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Hawk.put(Constants.UserType, Constants.Organization);
                 Intent LoginActivity = new Intent(RegistrationsTypeActivity.this, RegistrationActivity.class);
-                LoginActivity.putExtra(Constants.Bundle_Login_Type, Constants.Organization);
+                Hawk.put(Constants.Bundle_Login_Type, Constants.Organization);
                 startActivity(LoginActivity);
             }
         });
 
 
+    }
+    public static void FinishRegistrationType(){
+        RegtypeActivity.finish();
     }
 }

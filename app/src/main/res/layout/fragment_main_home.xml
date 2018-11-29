@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/Frgment_Main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -19,13 +20,28 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-
+<!--
+            <ir.apend.slider.ui.Slider
+                android:id="@+id/slider"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                app:animateIndicators="true"
+                app:defaultIndicators="circle"
+                app:indicatorSize="8dp"
+                app:intervalSecond="3"
+                app:loopSlides="true" />-->
+            <com.daimajia.slider.library.SliderLayout
+                android:id="@+id/slider"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                />
+            <!--
             <com.smarteist.autoimageslider.SliderLayout
                 android:id="@+id/imageSliderHomeFragment"
                 android:layout_width="match_parent"
                 android:layout_gravity="center"
                 android:layout_height="220dp"
-                />
+                />-->
 
 
             <android.support.v7.widget.RecyclerView

@@ -111,4 +111,13 @@
     <string name="Confirm">تأكيد</string>
     <string name="Quran">
 وَتَعَاوَنُوا عَلَى الْبِرِّ وَالتَّقْوَىٰ ۖ وَلَا تَعَاوَنُوا عَلَى الْإِثْمِ وَالْعُدْوَانِ ۚ وَاتَّقُوا اللَّهَ ۖ إِنَّ اللَّهَ شَدِيدُ الْعِقَابِ  \u0020\u0020\u0020\u0020\u0020 \u0020\u0020\u0020\u0020\u0020 \u0020\u0020\u0020\u0020\u0020  \u0020\u0020\u0020\u0020\u0020 \u0020\u0020\u0020\u0020\u0020 \u0020\u0020\u0020\u0020\u0020 وَتَعَاوَنُوا عَلَى الْبِرِّ وَالتَّقْوَىٰ ۖ وَلَا تَعَاوَنُوا عَلَى الْإِثْمِ وَالْعُدْوَانِ ۚ وَاتَّقُوا اللَّهَ ۖ إِنَّ اللَّهَ شَدِيدُ  الْعِقَابِِ</string>
+    <string name="ReportComplete">تم التبليغ</string>
+    <string name="PostDeleted">تم المسح</string>
+    <string name="EmployeeAdded">اضافة موظف</string>
+    <string name="Donation">التبرعات</string>
+    <string name="Reset">"اعادة تعين "</string>
+    <string name="WrongCode">رقم تأكيد خاطئ</string>
+    <string name="PassHadbeenEditted">تم تعديل الرقم السري</string>
+    <string name="Ihaveone">امتلك رقم تأكيدي</string>
+    <string name="LoadDonations">تحميل التبرعات</string>
 </resources>
