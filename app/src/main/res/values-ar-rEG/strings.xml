@@ -4,7 +4,7 @@
     <string name="organization">جمعية</string>
     <string name="Donor">متبرع</string>
     <string name="Beneficiary">مستفيد</string>
-    <string name="loginhintname">اسم المستخدم</string>
+    <string name="loginhintname">الاسم</string>
     <string name="loginhintpassword">كلمة المرور</string>
     <string name="forgetPass">هل نسيت كلمة السر ؟</string>
     <string name="Enter">دخول</string>
@@ -67,7 +67,7 @@
     <string name="emailPlease">من فضلك ادخل الايميل</string>
     <string name="namePlease">من فضلك ادخل الاسم</string>
     <string name="numberExist">هذا الايميل موجود بالفعل</string>
-    <string name="ReciveDonation">استقبل التبرع</string>
+    <string name="ReciveDonation">استلمت التبرع</string>
     <string name="DonationDescribtion">تفاصيل التبرع</string>
     <string name="DonationDetails">تفاصيل التبرع</string>
     <string name="Map">الخريطة</string>
@@ -109,15 +109,34 @@
     <string name="yes">نعم</string>
     <string name="AlertMSG">الرجاء عدم ازعاج المتبرع والاكتفاء بالتبرع المعروض فقط</string>
     <string name="Confirm">تأكيد</string>
+    <string name="didntwant">لم اعد ارغب فيه</string>
     <string name="Quran">
 وَتَعَاوَنُوا عَلَى الْبِرِّ وَالتَّقْوَىٰ ۖ وَلَا تَعَاوَنُوا عَلَى الْإِثْمِ وَالْعُدْوَانِ ۚ وَاتَّقُوا اللَّهَ ۖ إِنَّ اللَّهَ شَدِيدُ الْعِقَابِ  \u0020\u0020\u0020\u0020\u0020 \u0020\u0020\u0020\u0020\u0020 \u0020\u0020\u0020\u0020\u0020  \u0020\u0020\u0020\u0020\u0020 \u0020\u0020\u0020\u0020\u0020 \u0020\u0020\u0020\u0020\u0020 وَتَعَاوَنُوا عَلَى الْبِرِّ وَالتَّقْوَىٰ ۖ وَلَا تَعَاوَنُوا عَلَى الْإِثْمِ وَالْعُدْوَانِ ۚ وَاتَّقُوا اللَّهَ ۖ إِنَّ اللَّهَ شَدِيدُ  الْعِقَابِِ</string>
     <string name="ReportComplete">تم التبليغ</string>
     <string name="PostDeleted">تم المسح</string>
-    <string name="EmployeeAdded">اضافة موظف</string>
     <string name="Donation">التبرعات</string>
+    <string name="EmployeeAdded">اضافة موظف</string>
     <string name="Reset">"اعادة تعين "</string>
     <string name="WrongCode">رقم تأكيد خاطئ</string>
     <string name="PassHadbeenEditted">تم تعديل الرقم السري</string>
     <string name="Ihaveone">امتلك رقم تأكيدي</string>
     <string name="LoadDonations">تحميل التبرعات</string>
+    <string name="YourEnoughForOneFamilyDoation">عدد تبرعاتك التي تكفي عائلة</string>
+    <string name="PromoCode">برموكود(اختياري)</string>
+    <string name="CreateNewAccount">عمل حساب جديد ؟</string>
+    <string name="Updated">تم نشر تبرعك</string>
+    <string name="yourMSGHadbeenRecived">تم ارسال رسالتك</string>
+    <string name="PleaseFillEmptyFields">برجاء ملئ جميع الحقول</string>
+    <string name="EmployeeDeleted">تم حذف الموظف</string>
+    <string name="DeleteConfirmation">هل انت متأكد من انك تريد حذف الموظف ؟</string>
+    <string name="Accounthadbeenedited">تم تعديل الحساب</string>
+    <string name="Follow_us">تابعنا</string>
+    <string name="share">نشر</string>
+    <string name="Evaluation">تقييم</string>
+    <string name="AdressUpdated">تم تعديل العنوان</string>
+    <string name="NoData">لا يوجود بيانات الان</string>
+    <string name="EnoughforoneFamilyDonation">عدد التبرعات التي تكفي عائلة واحدة</string>
+    <string name="EnoughforMoreFamilyDonation">عدد التبرعات التي تكفي اكثر من عائلة</string>
+    <string name="EnoughforoneFamilyDonationReferedByyou">عدد التبرعات التي تكفي عائلة عن طريق احالاتك</string>
+    <string name="EnoughforMoreFamilyDonationReferedByyou">عدد التبرعات اللتي تكفي اكثر من عائلة عن طريق احالاتك</string>
 </resources>

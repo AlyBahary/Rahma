@@ -73,7 +73,7 @@ public class RegistrationActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 pd = new ProgressDialog(RegistrationActivity.this);
-                pd.setMessage("loading");
+                pd.setMessage(getString(R.string.loading));
                 pd.show();
                 name = nameEditText.getText().toString();
                 number = numberEditText.getText().toString();

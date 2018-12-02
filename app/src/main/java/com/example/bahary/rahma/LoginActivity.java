@@ -71,7 +71,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //LoginConnection("01272346389", "123456");
                 pd = new ProgressDialog(LoginActivity.this);
-                pd.setMessage("loading");
+                pd.setMessage(getString(R.string.loading));
                 pd.show();
                 Name = usenameEditText.getText().toString();
                 Pass = passwordEditText.getText().toString();
@@ -151,6 +151,7 @@ public class LoginActivity extends AppCompatActivity {
                     Hawk.put(Constants.Mobile, loginModel.getUser().getMobile());
                     Hawk.put(Constants.UserCityID, loginModel.getUser().getCityId());
                     Hawk.put(Constants.UserPromoCode, loginModel.getUser().getPromocode());
+                    Log.d(TAG, "onResponse: "+loginModel.getUser().getPromocode());
                     Hawk.put(Constants.UserOrganzationID, loginModel.getUser().getOrganizationId());
                     Hawk.put(Constants.User_Exist,"1");
                     //Hawk.put(Constants.Email,loginModel.getUser().get());
@@ -159,7 +160,7 @@ public class LoginActivity extends AppCompatActivity {
 
                 } else {
                     View parentLayout = findViewById(android.R.id.content);
-                    Snackbar.make(parentLayout, "" + getString(R.string.SomethingWrong), Snackbar.LENGTH_LONG)
+                    Snackbar.make(parentLayout, "" + getString(R.string.Dataisnotcorrect), Snackbar.LENGTH_LONG)
                             .setAction("CLOSE", new View.OnClickListener() {
                                 @Override
                                 public void onClick(View view) {

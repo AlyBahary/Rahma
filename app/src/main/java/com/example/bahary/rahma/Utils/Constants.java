@@ -43,6 +43,7 @@ public class Constants {
     public static final String mget_donations="rahma/api/get_donations";
     public static final String mset_Edit="rahma/api/edit";
     public static final String add_address="rahma/api/add_address";
+    public static final String edit_address="rahma/api/edit_address";
     public static final String get_addresses="rahma/api/get_addresses";
     public static final String add_donation="rahma/api/add_donation";
     public static final String edit_donation="rahma/api/edit_donation";

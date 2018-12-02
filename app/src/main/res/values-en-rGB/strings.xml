@@ -138,6 +138,19 @@
     <string name="Follow_us">Follow us</string>
     <string name="share">Share</string>
     <string name="Evaluation">Evaluation</string>
+    <string name="AdressUpdated">Adress had been updated</string>
+    <string name="NoData">No data avaliable now</string>
+    <string name="EnoughforoneFamilyDonation">Enough for one family Donation</string>
+    <string name="EnoughforMoreFamilyDonation">Enough for more family donation</string>
+    <string name="NumberBenefitorRefferedByYoy">Number benefitor reffered by you</string>
+    <string name="PromoCodee">Promo Code</string>
+    <string name="NumberCharityRefferedByYou">Number charity reffered by You</string>
+    <string name="Dataisnotcorrect">Access Data is not correct</string>
+    <string name="loading">loading..</string>
+    <string name="Next">Next</string>
+    <string name="MSGtext">Message text</string>
+    <string name="MSGTitle">Message tittle</string>
+    <string name="pleasaddlocationmarker">Please add location marker</string>
     <string-array name="Block_type">
         <item>@string/Home</item>
         <item>@string/Block</item>

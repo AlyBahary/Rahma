@@ -238,13 +238,13 @@ public class HomeActivity extends AppCompatActivity
             fragmentTransaction.addToBackStack(null);
             fragmentTransaction.commit();
 
-        } else if (id == R.id.nav_Suggestion) {
-            SuggestionFragment suggestionFragment = new SuggestionFragment();
+        } /*else if (id == R.id.nav_Suggestion) {
+          *//*  SuggestionFragment suggestionFragment = new SuggestionFragment();
             fragmentTransaction.replace(R.id.Frgment_Container, suggestionFragment);
             fragmentTransaction.addToBackStack(null);
             fragmentTransaction.commit();
-
-        } else if (id == R.id.nav_Exit) {
+*//*
+        }*/ else if (id == R.id.nav_Exit) {
             Hawk.delete(Constants.User_Exist);
             Intent i = new Intent(HomeActivity.this, LoginActivity.class);
             startActivity(i);

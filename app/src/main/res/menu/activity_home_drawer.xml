@@ -20,10 +20,10 @@
             android:id="@+id/nav_AboutUs"
             android:icon="@drawable/about_us"
             android:title="@string/AboutUs" />
-        <item
+        <!--<item
             android:id="@+id/nav_Suggestion"
             android:icon="@drawable/suggestions"
-            android:title="@string/Suggestion" />
+            android:title="@string/Suggestion" />-->
         <item
             android:id="@+id/nav_ContactUs"
             android:icon="@drawable/suggestions"

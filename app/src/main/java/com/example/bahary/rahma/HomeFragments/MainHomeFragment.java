@@ -34,6 +34,7 @@ import com.example.bahary.rahma.Models.GetImagesURLModel;
 import com.example.bahary.rahma.Models.HomeItemModel;
 import com.example.bahary.rahma.Models.UserData.UserDataModel;
 import com.example.bahary.rahma.NavFragments.SettingFragment;
+import com.example.bahary.rahma.Organization.Organiztion_Main_fragment;
 import com.example.bahary.rahma.R;
 import com.example.bahary.rahma.RecyclerView.HomeItemsAdapter;
 import com.example.bahary.rahma.Utils.Connectors;
@@ -68,6 +69,12 @@ public class MainHomeFragment extends Fragment {
     private SliderLayout mDemoSlider;
     String T;
     HashMap<String, String> url_maps;
+    String type;
+    MainHomeFragment mainHomeFragment;
+    Organiztion_Main_fragment organiztion_main_fragment;
+    SettingFragment settingFragment;
+    ;
+
 
     public MainHomeFragment() {
         // Required empty public constructor
@@ -82,19 +89,67 @@ public class MainHomeFragment extends Fragment {
         //
         mDemoSlider = (SliderLayout) view.findViewById(R.id.slider);
         url_maps = new HashMap<String, String>();
-
+        settingFragment = new SettingFragment();
+        mainHomeFragment = new MainHomeFragment();
+        organiztion_main_fragment = new Organiztion_Main_fragment();
+        type = Hawk.get(Constants.UserRole);
 
         //
         final BottomNavigationView bottomNavigationView = getActivity().findViewById(R.id.navigation);
         bottomNavigationView.setVisibility(View.VISIBLE);
-        bottomNavigationView.setSelected(false);
-        bottomNavigationView.getMenu().getItem(0).setCheckable(false);
+        bottomNavigationView.getMenu().getItem(2).setChecked(true);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-                return false;
+                SettingFragment myFragment = (SettingFragment) getActivity().getSupportFragmentManager().findFragmentByTag("MY_FRAGMENT");
 
+                if (menuItem.getItemId() == R.id.navigation_home) {
+                    bottomNavigationView.getMenu().getItem(2).setChecked(true);
+
+                } else if (menuItem.getItemId() == R.id.navigation_settings) {
+
+                    if (myFragment != null && myFragment.isVisible()) {
+                        // add your code here
+                    }else {
+                        FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
+                        fragmentTransaction.replace(R.id.Frgment_Container, settingFragment, "MY_FRAGMENT");
+                        fragmentTransaction.addToBackStack(null);
+                        fragmentTransaction.commit();
+                    }
+                    bottomNavigationView.getMenu().getItem(2).setChecked(true);
+
+                } else if (menuItem.getItemId() == R.id.navigation_Home) {
+                    FragmentTransaction fragmentTransaction = getActivity().getSupportFragmentManager().beginTransaction();
+
+                    if (type.equals(Constants.Donor)) {
+                        fragmentTransaction.replace(R.id.Frgment_Container, mainHomeFragment);
+                        fragmentTransaction.commit();
+                    } else {
+                        fragmentTransaction.replace(R.id.Frgment_Container, organiztion_main_fragment);
+                        fragmentTransaction.commit();
+
+                    }
+
+
+                } else if (menuItem.getItemId() == R.id.navigation_reques) {
+                    bottomNavigationView.getMenu().getItem(2).setChecked(true);
+                    Intent whatsappIntent = new Intent(Intent.ACTION_SEND);
+                    whatsappIntent.setType("text/plain");
+                    whatsappIntent.setPackage("com.whatsapp");
+                    whatsappIntent.putExtra(Intent.EXTRA_TEXT, "Signup by promo codePromoCode :" + Hawk.get(Constants.UserPromoCode) + " " + "https://play.google.com/store/apps/details?id=com.smatech.net.rahma&hl=en");
+                    try {
+                        startActivity(whatsappIntent);
+                    } catch (android.content.ActivityNotFoundException ex) {
+                        Toast.makeText(getActivity(), "Whatsapp have not been installed.", Toast.LENGTH_SHORT).show();
+                    }
+
+
+                } else if (menuItem.getItemId() == R.id.navigation_request) {
+
+                }
+                return true;
             }
+
         });
 
 
@@ -231,7 +286,7 @@ public class MainHomeFragment extends Fragment {
 
                         }*/
 
-                        url_maps.put( "http://www.rahma-app.com/rahma/prod_img/" + allSliderModel.getSliders().get(i).getImage(),T);
+                        url_maps.put("http://www.rahma-app.com/rahma/prod_img/" + allSliderModel.getSliders().get(i).getImage(), T);
 
                     }
                     for (String name : url_maps.keySet()) {

@@ -39,10 +39,16 @@
                     android:singleLine="true"
                     android:text="@string/Quran"
                     android:textColor="@color/white"
-
                     android:textSize="18sp" />
                 />
             </LinearLayout>
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/logo" />
 
         </LinearLayout>
 
@@ -52,8 +58,7 @@
             android:layout_marginBottom="30dp"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
-
-            android:layout_marginTop="-100dp"
+            android:layout_marginTop="-20dp"
             android:background="@color/white"
             app:cardCornerRadius="6dp"
             app:cardElevation="7dp">
@@ -64,15 +69,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="0dp"
                 android:layout_marginRight="0dp"
-                android:layout_marginTop="100dp"
+                android:layout_marginTop="40dp"
                 android:background="@drawable/bottom_shadow"
                 android:elevation="3dp"
                 android:gravity="center"
-                android:layoutDirection="ltr"
                 android:orientation="horizontal"
                 android:paddingLeft="30dp"
-                android:paddingRight="30dp"
-                android:textDirection="ltr">
+                android:paddingRight="30dp">
 
                 <ImageView
                     android:layout_width="20dp"
@@ -85,11 +88,11 @@
                     android:layout_height="wrap_content"
                     android:background="@null"
                     android:focusable="true"
+                    android:gravity="start"
                     android:hint="@string/Phoneunmberhint"
                     android:inputType="phone"
-                    android:layoutDirection="ltr"
                     android:padding="10dp"
-                    android:textDirection="ltr"
+                    android:textAlignment="viewStart"
                     android:textSize="14sp" />
             </LinearLayout>
 
@@ -98,15 +101,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="0dp"
                 android:layout_marginRight="0dp"
-                android:layout_marginTop="150dp"
+                android:layout_marginTop="80dp"
                 android:background="@drawable/bottom_shadow"
                 android:elevation="3dp"
                 android:gravity="center"
-                android:layoutDirection="ltr"
                 android:orientation="horizontal"
                 android:paddingLeft="30dp"
-                android:paddingRight="30dp"
-                android:textDirection="ltr">
+                android:paddingRight="30dp">
 
                 <ImageView
                     android:layout_width="20dp"
@@ -118,11 +119,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@null"
+                    android:gravity="start"
                     android:hint="@string/loginhintpassword"
                     android:inputType="textPassword"
-                    android:layoutDirection="ltr"
                     android:padding="10dp"
-                    android:textDirection="ltr"
+                    android:textAlignment="viewStart"
                     android:textSize="14sp" />
             </LinearLayout>
 
@@ -133,7 +134,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:layout_marginTop="200dp"
+                android:layout_marginTop="130dp"
                 android:padding="10dp"
                 android:text="@string/CreateNewAccount" />
 
@@ -143,7 +144,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:layout_marginTop="240dp"
+                android:layout_marginTop="170dp"
                 android:padding="10dp"
                 android:text="@string/forgetPass" />
 
@@ -154,7 +155,7 @@
                 android:layout_marginBottom="10dp"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
-                android:layout_marginTop="310dp"
+                android:layout_marginTop="220dp"
                 android:background="@drawable/button1"
                 android:text="@string/Enter"
                 android:textAllCaps="false"
