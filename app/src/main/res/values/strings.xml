@@ -2,7 +2,7 @@
     <string name="app_name" translatable="false">Rahma</string>
     <string name="Donor">Donor</string>
     <string name="Beneficiary">Beneficiary</string>
-    <string name="organization">"organization "</string>
+    <string name="organization">"Charity"</string>
     <string name="loginhintname">"Username "</string>
     <string name="loginhintpassword">"Password "</string>
     <string name="Enter">Enter</string>
@@ -41,8 +41,8 @@
     <string name="Food">Food</string>
     <string name="accesories">Accesories</string>
     <string name="FoodQuantityTxt">this food is enough for</string>
-    <string name="morethanten">more Than Ten People</string>
-    <string name="Lessthanten">Less than 10 People</string>
+    <string name="morethanten">"more Than "</string>
+    <string name="Lessthanten">Less than family</string>
     <string name="UploadPhoto">Upload Photo</string>
     <string name="AddnewLocation">Add new Location</string>
     <string name="DonationLocation">Donation Location</string>
@@ -92,8 +92,8 @@
     <string name="WriteConatctNumber">Write Contact Number Here</string>
     <string name="BlockNo">Block Number</string>
     <string name="WriteblockNoHere">Write Block no here</string>
-    <string name="PartmentNo">Partment Number</string>
-    <string name="WtritePartmentNohere">Write Partment Number here</string>
+    <string name="PartmentNo">Apartment Number</string>
+    <string name="WtritePartmentNohere">Write aPartment Number here</string>
     <string name="organizationNo">Organization Number</string>
     <string name="organizationName">Organization Name</string>
     <string name="WtriteOrganizationNohere">Write Organziation Number Here</string>
@@ -148,9 +148,7 @@
     <string name="NoData">No data avaliable now</string>
     <string name="EnoughforoneFamilyDonation">Enough for one family Donation</string>
     <string name="EnoughforMoreFamilyDonation">Enough for more family donation</string>
-    <string name="NumberBenefitorRefferedByYoy">Number benefitor reffered by you</string>
     <string name="PromoCodee">Promo Code</string>
-    <string name="NumberCharityRefferedByYou">Number charity reffered by You</string>
     <string name="Dataisnotcorrect">Access Data is not correct</string>
     <string name="loading">loading..</string>
     <string name="Next">Next</string>
@@ -158,6 +156,21 @@
     <string name="MSGTitle">Message tittle</string>
     <string name="organizationloc">institution</string>
     <string name="pleasaddlocationmarker">Please add location marker</string>
+    <string name="addAdressReaded">I have read how to add an address</string>
+    <string name="Done">Done</string>
+    <string name="Noofusersreferedbyyou">Number of users Refered by you</string>
+    <string name="totalnumberdonationsreferedbyyou">Total number donation referd by you</string>
+    <string name="DonationType1">Donation type :</string>
+    <string name="Description">Description</string>
+    <string name="VertificationCode1">Vertification Code</string>
+    <string name="CLOSE">Close</string>
+    <string name="no_of_charity_refered_by_you">number of charity refered by you</string>
+    <string name="AccountbenefitesReferedByYou">Number of benefers refered by you</string>
+    <string name="Yes">Yes</string>
+    <string name="No">No</string>
+    <string name="Terms_Condition"> Agree with Terms and Condition</string>
+    <string name="youhavetoAccepttermsandcondition">You have to accept terms and condition</string>
+    <string name="Registration">Create new account</string>
 
     <string-array name="Block_type">
         <item>@string/Home</item>

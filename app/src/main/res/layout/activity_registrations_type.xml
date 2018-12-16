@@ -35,12 +35,12 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/scrollabletextviewbg"
                 android:ellipsize="marquee"
-                android:gravity="center"
+                android:gravity="start|center"
                 android:scrollHorizontally="true"
                 android:singleLine="true"
                 android:text="@string/Quran"
+                android:textAlignment="viewStart"
                 android:textColor="@color/white"
-                android:textDirection="anyRtl"
                 android:textSize="16sp" />
         </LinearLayout>
         />

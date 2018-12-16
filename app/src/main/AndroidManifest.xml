@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.bahary.rahma">
+    package="com.smatech.rahmaapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -16,15 +16,18 @@
         android:allowBackup="true"
         android:icon="@mipmap/app_icon"
         android:label="@string/app_name"
-        android:supportsRtl="true"
         android:roundIcon="@mipmap/app_icon"
+        android:supportsRtl="true"
         android:theme="@style/AppTheme.Launcher">
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyAFNioehAC-KZF6-WNxKvg_WV8zX0N8PE8" />
-        <meta-data
-            android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
+            android:value="AIzaSyAIaAD-gBTBP6gAqS6PZnES4FuUsIOGREo" />
+
+        <service android:name=".Services.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
 
         <activity
             android:name=".RegistrationsTypeActivity"
@@ -56,13 +59,17 @@
             android:name=".ForgetPasswordActivity"
             android:screenOrientation="portrait" />
         <activity
+            android:name=".Dialoge.FirstTimeAddActivity"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".Map.MapsActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".StuckActivity"
             android:screenOrientation="portrait"
             android:theme="@style/CustomActionBarTheme" />
-        <activity android:name=".ResetPassword"></activity>
+        <activity android:name=".ResetPassword" />
+        <activity android:name=".Terms_Condrition"></activity>
     </application>
 
 </manifest>

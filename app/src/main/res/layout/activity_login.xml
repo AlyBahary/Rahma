@@ -34,10 +34,11 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/scrollabletextviewbg"
                     android:ellipsize="marquee"
-                    android:gravity="center"
+                    android:gravity="start|center"
                     android:scrollHorizontally="true"
                     android:singleLine="true"
                     android:text="@string/Quran"
+                    android:textAlignment="viewStart"
                     android:textColor="@color/white"
                     android:textSize="18sp" />
                 />
@@ -125,8 +126,44 @@
                     android:padding="10dp"
                     android:textAlignment="viewStart"
                     android:textSize="14sp" />
+
             </LinearLayout>
 
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="140dp"
+                android:background="@color/colorPrimary"
+                android:layoutDirection="ltr"
+                android:orientation="horizontal"
+                android:padding="1dp">
+
+                <TextView
+                    android:id="@+id/En_Lang"
+                    android:layout_width="60dp"
+
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="English"
+                    android:textColor="@color/white"
+
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/Ar_Lang"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="العربية"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp" />
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/login_Registration"
@@ -134,7 +171,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:layout_marginTop="130dp"
+                android:layout_marginTop="180dp"
                 android:padding="10dp"
                 android:text="@string/CreateNewAccount" />
 
@@ -144,7 +181,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:layout_marginTop="170dp"
+                android:layout_marginTop="210dp"
                 android:padding="10dp"
                 android:text="@string/forgetPass" />
 
@@ -155,9 +192,9 @@
                 android:layout_marginBottom="10dp"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
-                android:layout_marginTop="220dp"
+                android:layout_marginTop="260dp"
                 android:background="@drawable/button1"
-                android:text="@string/Enter"
+                android:text="@string/Login"
                 android:textAllCaps="false"
                 android:textColor="@color/white" />
 

@@ -12,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white"
+        android:focusable="true"
         android:orientation="vertical">
 
         <LinearLayout
@@ -34,10 +35,11 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/scrollabletextviewbg"
                     android:ellipsize="marquee"
-                    android:gravity="center"
+                    android:gravity="start|center"
                     android:scrollHorizontally="true"
                     android:singleLine="true"
                     android:text="@string/Quran"
+                    android:textAlignment="viewStart"
                     android:textColor="@color/white"
                     android:textSize="18sp" />
                 />
@@ -62,8 +64,6 @@
             android:layout_marginRight="30dp"
             android:layout_marginTop="-20dp"
             android:background="@color/white"
-
-
             app:cardCornerRadius="6dp"
             app:cardElevation="7dp">
 
@@ -91,12 +91,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@null"
+                    android:focusable="true"
                     android:gravity="start"
                     android:hint="@string/loginhintname"
                     android:inputType="textPersonName"
                     android:padding="10dp"
                     android:textAlignment="viewStart"
-                    
+
                     android:textSize="14sp" />
             </LinearLayout>
 
@@ -157,10 +158,10 @@
                     android:gravity="start"
                     android:hint="@string/EmailHint"
                     android:inputType="textEmailAddress"
-                    
+
                     android:padding="10dp"
                     android:textAlignment="viewStart"
-                    
+
                     android:textSize="14sp" />
             </LinearLayout>
 
@@ -228,10 +229,10 @@
                     android:gravity="start"
                     android:hint="@string/loginhintpassword"
                     android:inputType="textPassword"
-                    
+
                     android:padding="10dp"
                     android:textAlignment="viewStart"
-                    
+
                     android:textSize="14sp" />
             </LinearLayout>
 
@@ -258,14 +259,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@null"
-
                     android:gravity="start"
                     android:hint="@string/loginhintpassword"
                     android:inputType="textPassword"
-                    
                     android:padding="10dp"
                     android:textAlignment="viewStart"
-                    
                     android:textSize="14sp" />
 
             </LinearLayout>
@@ -293,16 +291,37 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@null"
-
                     android:gravity="start"
                     android:hint="@string/PromoCode"
-                    android:inputType="textPassword"
-                    
+                    android:inputType="text"
                     android:padding="10dp"
                     android:textAlignment="viewStart"
-                    
                     android:textSize="14sp" />
             </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingRight="30dp"
+                android:layout_marginTop="290dp"
+
+                >
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:id="@+id/terms_checkbox"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Dark_grey"
+                    android:textSize="12sp"
+                    android:id="@+id/terms_condition"
+                    android:text="@string/Terms_Condition"
+                    android:padding="10dp"/>
+            </LinearLayout>
+
 
 
             <LinearLayout
@@ -335,9 +354,9 @@
                 android:layout_marginBottom="10dp"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
-                android:layout_marginTop="310dp"
-                android:background="@drawable/button1"
-                android:text="@string/Enter"
+                android:layout_marginTop="330dp"
+                android:background="@drawable/button1_disable"
+                android:text="@string/Registration"
                 android:textAllCaps="false"
                 android:textColor="@color/white" />
 
