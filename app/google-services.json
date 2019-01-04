@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "1067261428135",
+    "firebase_url": "https://rahma-68fdf.firebaseio.com",
+    "project_id": "rahma-68fdf",
+    "storage_bucket": "rahma-68fdf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1067261428135:android:8a16374f9c678f24",
+        "android_client_info": {
+          "package_name": "com.smatech.rahmaapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1067261428135-6s9ir5lt24g6lq2cbd0rhp3d254g4q0j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.smatech.rahmaapp",
+            "certificate_hash": "2d5080577bf1126c783dd60a151c6d14f0f00bbd"
+          }
+        },
+        {
+          "client_id": "1067261428135-3up3p70uqvm4nmlvlco23bn924utssnu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBp-8Ecs674zZCPTbzfefzKGBP1Nfq4Om8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1067261428135-3up3p70uqvm4nmlvlco23bn924utssnu.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1067261428135-d6vibkg40dcsh5hthcck0i26i1i4mqb8.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.smatech.rahmaApp"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

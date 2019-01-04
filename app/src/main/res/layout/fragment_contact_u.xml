@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="50dp"
+    android:background="@color/white"
+    tools:context=".NavFragments.ContactUSFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@drawable/bg"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/scrolbarbg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/scrollbarbg"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/scrollingtext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/scrollabletextviewbg"
+                        android:ellipsize="marquee"
+                        android:gravity="start|center"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:text="@string/Quran"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+                    />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/logo" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="30dp"
+                android:gravity="start"
+                android:hint="@string/EmailHint"
+                android:inputType="textPersonName"
+                android:padding="20dp"
+                android:textAlignment="viewStart"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:gravity="start"
+                android:hint="@string/Phoneunmberhint"
+                android:inputType="number"
+                android:padding="20dp"
+                android:textAlignment="viewStart"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:padding="10dp"
+                android:text="@string/MSGTitle"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/MSGtittle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/edit_text_bg"
+                android:elevation="2dp"
+                android:gravity="start"
+                android:hint="@string/MSGTitle"
+                android:padding="10dp"
+                android:textAlignment="viewStart"
+                android:textSize="14sp" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:padding="10dp"
+                android:text="@string/MSGtext"
+                android:textSize="15sp" />
+
+
+            <EditText
+                android:id="@+id/MSG"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/edit_text_bg"
+                android:elevation="2dp"
+                android:gravity="start|top"
+                android:textAlignment="viewStart"
+                android:hint="@string/MSGtext"
+                android:padding="10dp"
+                android:scrollbars="vertical"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/send"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/button1"
+                android:elevation="30dp"
+                android:text="@string/Send"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="30dp"
+    android:background="@color/white"
+    android:orientation="vertical"
+    app:cardCornerRadius="17dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/button">
+
+                <Spinner
+                    android:id="@+id/locationtype"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/Block_type"
+                    android:prompt="@string/Block_type" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Type_Home"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/HomeNo"
+                        android:textColor="@color/Black"
+                        android:textSize="17sp" />
+
+                    <EditText
+                        android:id="@+id/homeNumber"
+                        android:layout_width="match_parent"
+                        android:inputType="number"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/WtriteHomehere"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="25dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/LocationDescribtion"
+                            android:textColor="@color/Black"
+                            android:textSize="17sp" />
+
+                        <EditText
+                            android:id="@+id/Wtritelocationhere"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:gravity="start"
+                            android:hint="@string/Wtritelocationhere"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="25dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ConatctNumber1"
+                        android:textColor="@color/Black"
+                        android:textSize="17sp" />
+
+                    <EditText
+                        android:id="@+id/Contactno1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/WriteConatctNumber"
+                        android:inputType="number"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Type_Organziation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/organizationName"
+                        android:textColor="@color/Black"
+                        android:textSize="17sp" />
+
+                    <EditText
+                        android:id="@+id/WtriteOrganizationName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/WtriteOrganizationNamehere"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="25dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/LocationDescribtion"
+                            android:textColor="@color/Black"
+                            android:textSize="17sp" />
+
+                        <EditText
+                            android:id="@+id/Wtritelocationhere2"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:gravity="start"
+                            android:hint="@string/Wtritelocationhere"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="25dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ConatctNumber1"
+                        android:textColor="@color/Black"
+                        android:textSize="17sp" />
+
+                    <EditText
+                        android:id="@+id/OrganizationNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/WriteConatctNumber"
+                        android:inputType="number"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Type_Block"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/BlockNo"
+                        android:textColor="@color/Black"
+                        android:textSize="17sp" />
+
+                    <EditText
+                        android:id="@+id/BlockNohere"
+                        android:layout_width="match_parent"
+                        android:inputType="number"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/WriteblockNoHere"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/PartmentNo"
+                        android:textColor="@color/Black"
+                        android:textSize="17sp" />
+
+                    <EditText
+                        android:id="@+id/PartmentNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:hint="@string/WtritePartmentNohere"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/FloorNumber"
+                        android:textColor="@color/Black"
+                        android:textSize="17sp" />
+
+                    <EditText
+                        android:id="@+id/FloorNumber"
+                        android:layout_width="match_parent"
+                        android:inputType="number"
+
+                        android:layout_height="wrap_content"
+                        android:hint="@string/FloorNumber"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/LocationDescribtion"
+                        android:textColor="@color/Black"
+                        android:textSize="17sp" />
+
+                    <EditText
+                        android:id="@+id/BlocklocationDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:gravity="start"
+                        android:hint="@string/Wtritelocationhere"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="25dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ConatctNumber1"
+                        android:textColor="@color/Black"
+                        android:textSize="17sp" />
+
+                    <EditText
+                        android:id="@+id/Contactno3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/WriteConatctNumber"
+                        android:inputType="number"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/AddlocationhereButton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/button1"
+                android:text="@string/Add"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/CancellocationhereButton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/button1"
+                android:text="@string/Cancell"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+    </ScrollView>
+</android.support.v7.widget.CardView>

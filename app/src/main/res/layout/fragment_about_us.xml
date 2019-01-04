@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NavFragments.AboutUsFragment"
+    android:layout_marginBottom="50dp">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/scrolbarbg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/scrollbarbg"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/scrollingtext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/scrollabletextviewbg"
+                    android:ellipsize="marquee"
+                    android:gravity="center"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:text="@string/Quran"
+                    android:textColor="@color/white"
+                    android:textDirection="anyRtl"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <WebView
+                android:id="@+id/webView1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center" />
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="50dp"
+    android:background="@color/white"
+    tools:context=".NavFragments.ProfileFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@drawable/bg"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/scrolbarbg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/scrollbarbg"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/scrollingtext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/scrollabletextviewbg"
+                        android:ellipsize="marquee"
+                        android:gravity="center|start"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:text="@string/Quran"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+                    />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/Profile_logo"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:src="@drawable/logo"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/AccountType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_marginTop="50dp"
+                    android:background="@drawable/smallbutton"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="متبرع فضي "
+                    android:textColor="@color/Black" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="30dp"
+                android:background="@color/grey"
+                android:visibility="gone" />
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+
+                android:layout_marginTop="-20dp"
+                android:src="@drawable/user"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/AccountName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+
+                android:text="Name"
+                android:textColor="@color/Dark_grey"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+
+                android:background="#bcbcbc"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <!--<ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/location" />
+
+                <TextView
+                    android:id="@+id/Account"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Name"
+                    android:textColor="@color/Dark_grey"
+                    android:textSize="16sp" />-->
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/phone"
+
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/AccountNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+
+                    android:padding="6dp"
+                    android:text="Name"
+                    android:textColor="@color/Dark_grey"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+
+                    android:background="#bcbcbc"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:padding="6dp"
+                    android:src="@drawable/email"
+
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/AccountEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+
+                    android:padding="6dp"
+                    android:text="Name"
+                    android:textColor="@color/Dark_grey"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#bcbcbc"
+
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:padding="6dp"
+                    android:src="@drawable/edit_" />
+
+                <TextView
+                    android:id="@+id/AccountPromoCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:text="Name"
+                    android:textColor="@color/Dark_grey"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:id="@+id/profileExtraData"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#bcbcbc" />
+
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:padding="6dp"
+                        android:src="@drawable/username" />
+
+                    <TextView
+                        android:id="@+id/AccountFamilyDonation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="6dp"
+                        android:text="@string/EnoughforoneFamilyDonation"
+                        android:textColor="@color/Dark_grey"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/AccountFamilyDonationNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="6dp"
+                        android:text="@string/EnoughforoneFamilyDonationReferedByyou"
+                        android:textColor="@color/Dark_grey"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#bcbcbc" />
+
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:padding="6dp"
+                        android:src="@drawable/group" />
+
+                    <TextView
+                        android:id="@+id/AccountMoreFamilyDonation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="6dp"
+                        android:text="@string/EnoughforMoreFamilyDonation"
+                        android:textColor="@color/Dark_grey"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/AccountMoreFamilyDonationNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="6dp"
+                        android:text="@string/EnoughforoneFamilyDonationReferedByyou"
+                        android:textColor="@color/Dark_grey"
+                        android:textSize="16sp" />
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#bcbcbc" />
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:padding="6dp"
+                        android:src="@drawable/email" />
+
+                    <TextView
+                        android:id="@+id/NumberCharityRefferedByYoy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="6dp"
+                        android:text="@string/EnoughforoneFamilyDonationReferedByyou"
+                        android:textColor="@color/Dark_grey"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/NumberCharityRefferedByYoyNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="6dp"
+                        android:text="@string/EnoughforoneFamilyDonationReferedByyou"
+                        android:textColor="@color/Dark_grey"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#bcbcbc" />
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:padding="6dp"
+                        android:src="@drawable/group" />
+
+                    <TextView
+                        android:id="@+id/AccountEoughForFamilyDonation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="6dp"
+                        android:text="@string/EnoughforMoreFamilyDonationReferedByyou"
+                        android:textColor="@color/Dark_grey"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/AccountEoughForFamilyDonationNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="6dp"
+                        android:text="@string/EnoughforoneFamilyDonationReferedByyou"
+                        android:textColor="@color/Dark_grey"
+                        android:textSize="16sp" />
+                    ////////////
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#bcbcbc" />
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:padding="6dp"
+                        android:src="@drawable/new_donation" />
+
+                    <TextView
+                        android:id="@+id/totalnumberdonationsreferedbyyou"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="6dp"
+                        android:text="@string/totalnumberdonationsreferedbyyou"
+                        android:textColor="@color/Dark_grey"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/totalnumberdonationsreferedbyyouNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="6dp"
+                        android:text="@string/EnoughforoneFamilyDonationReferedByyou"
+                        android:textColor="@color/Dark_grey"
+                        android:textSize="16sp" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#bcbcbc" />
+
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:padding="6dp"
+                    android:src="@drawable/user" />
+
+                <TextView
+                    android:id="@+id/AccountUserReferedByYou"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:text="@string/Noofusersreferedbyyou"
+                    android:textColor="@color/Dark_grey"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/AccountUserReferedByYouNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:text="@string/EnoughforoneFamilyDonationReferedByyou"
+                    android:textColor="@color/Dark_grey"
+                    android:textSize="16sp" />
+                ////////////////
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#bcbcbc" />
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:padding="6dp"
+                    android:src="@drawable/user" />
+
+                <TextView
+                    android:id="@+id/AccountcharityReferedByYou"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:text="@string/no_of_charity_refered_by_you"
+                    android:textColor="@color/Dark_grey"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/AccountcharityReferedByYouNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:text="@string/EnoughforoneFamilyDonationReferedByyou"
+                    android:textColor="@color/Dark_grey"
+                    android:textSize="16sp" />
+                ////////////////
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#bcbcbc" />
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:padding="6dp"
+                    android:src="@drawable/user" />
+
+                <TextView
+                    android:id="@+id/AccountbenefitesReferedByYou"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:text="@string/AccountbenefitesReferedByYou"
+                    android:textColor="@color/Dark_grey"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/AccountbenefitesReferedByYouNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:text="@string/EnoughforoneFamilyDonationReferedByyou"
+                    android:textColor="@color/Dark_grey"
+                    android:textSize="16sp" />
+                ////////////////
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

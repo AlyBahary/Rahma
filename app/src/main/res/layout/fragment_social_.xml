@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="50dp"
+    android:background="@color/white"
+    tools:context=".HomeFragments.Social_Fragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/about"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:padding="3dp"
+                android:text="TExt"
+                android:textColor="@color/Dark_grey"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/Dark_grey"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/howtouse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="20dp"
+                android:padding="3dp"
+                android:text="TExt"
+                android:textColor="@color/Dark_grey"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/Dark_grey"
+
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/facebook"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:padding="10dp"
+                android:src="@drawable/facebook" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Facebook"
+                android:gravity="center"
+                android:textColor="@color/Dark_grey"
+                android:textSize="18sp"/>
+
+
+            <ImageView
+                android:id="@+id/twitter"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:padding="10dp"
+                android:src="@drawable/twitter" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Twitter"
+                android:gravity="center"
+                android:textColor="@color/Dark_grey"
+                android:textSize="18sp"/>
+
+
+            <ImageView
+                android:id="@+id/instgram"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_gravity="center"
+                android:layout_margin="15dp"
+                android:src="@drawable/instgram" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Instagram"
+                android:gravity="center"
+                android:layout_marginTop="-10dp"
+                android:textColor="@color/Dark_grey"
+                android:textSize="18sp"/>
+
+
+
+            <ImageView
+                android:id="@+id/wtsp"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_gravity="center"
+                android:layout_margin="15dp"
+                android:padding="10dp"
+                android:visibility="gone"
+                android:src="@drawable/ic_whatsapp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="WhatsApp"
+                android:visibility="gone"
+
+                android:gravity="center"
+                android:textColor="@color/Dark_grey"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>
