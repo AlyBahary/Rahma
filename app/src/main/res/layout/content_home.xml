@@ -13,7 +13,10 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_gravity="bottom"
-        android:background="?android:attr/windowBackground"
+        app:itemTextColor="@color/white"
+        app:itemIconTint="@color/white"
+
+        android:background="@drawable/toolbar_bg1"
         app:menu="@menu/navigation"
         app:labelVisibilityMode="labeled"/>
 

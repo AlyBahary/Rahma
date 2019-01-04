@@ -260,7 +260,7 @@
                     android:layout_height="wrap_content"
                     android:background="@null"
                     android:gravity="start"
-                    android:hint="@string/loginhintpassword"
+                    android:hint="@string/loginhintrepassword"
                     android:inputType="textPassword"
                     android:padding="10dp"
                     android:textAlignment="viewStart"

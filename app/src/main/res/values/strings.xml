@@ -57,14 +57,14 @@
     <string name="FoodQuatity">Food Quantity</string>
     <string name="DummyLong">this Area bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</string>
     <string name="Delete">Delete</string>
-    <string name="Report">Report</string>
+    <string name="Report">Reporting a Beneficiary</string>
     <string name="ImageTitle">ImageTitle</string>
     <string name="yes_Recived">yes Recived</string>
     <string name="Main">Main</string>
     <string name="Map">Map</string>
     <string name="DonationDetails">Donation Details</string>
     <string name="DonationDescribtion">Donation Describtion</string>
-    <string name="ReciveDonation">Recive Donation</string>
+    <string name="ReciveDonation">I took it</string>
     <string name="numberExist">This number or Email is exist </string>
     <string name="namePlease">Please enter your name</string>
     <string name="emailPlease">Please Enter your Email</string>
@@ -89,6 +89,7 @@
     <string name="Block_type">Place type</string>
     <string name="LocationDescribtion">Location Description</string>
     <string name="ConatctNumber">Contact Number</string>
+    <string name="ConatctNumber1">Contact number (optional)</string>
     <string name="WriteConatctNumber">Write Contact Number Here</string>
     <string name="BlockNo">Block Number</string>
     <string name="WriteblockNoHere">Write Block no here</string>
@@ -106,7 +107,7 @@
     <string name="More">More</string>
     <string name="iwantit">I want it</string>
     <string name="locationtype">Location Type</string>
-    <string name="Deliver">Deliver</string>
+    <string name="Deliver">Map direction</string>
     <string name="AddnewEmployee">Add New Empoyee</string>
     <string name="EmployeeList">Empolyees List</string>
     <string name="EmloyeeList">Employee List</string>
@@ -129,7 +130,7 @@
     <string name="LoadDonations">Load Donations..</string>
     <string name="Donation">Donation</string>
     <string name="EmployeeAdded">Employe Added</string>
-    <string name="PromoCode">PromoCode(Optional)</string>
+    <string name="PromoCode">Invitation Code</string>
     <string name="Reset">Reset</string>
     <string name="WrongCode">Wrong Vertification Code</string>
     <string name="PassHadbeenEditted">Password Had been edited</string>
@@ -154,7 +155,7 @@
     <string name="Next">Next</string>
     <string name="MSGtext">Message text</string>
     <string name="MSGTitle">Message tittle</string>
-    <string name="organizationloc">institution</string>
+    <string name="organizationloc">Business</string>
     <string name="pleasaddlocationmarker">Please add location marker</string>
     <string name="addAdressReaded">I have read how to add an address</string>
     <string name="Done">Done</string>
@@ -171,6 +172,11 @@
     <string name="Terms_Condition"> Agree with Terms and Condition</string>
     <string name="youhavetoAccepttermsandcondition">You have to accept terms and condition</string>
     <string name="Registration">Create new account</string>
+    <string name="loginhintrepassword">Confirm password</string>
+    <string name="ErrorEmail1">This email not found</string>
+    <string name="inviationtxt1">It is recommended to share the application through social media by recording video or voice of how to register and use the application and then send it with confirmation of registration in the application through your code or to take the phone of people you know and download and register then explain to them how to use the app live. \n Download link:</string>
+    <string name="inviationtxt2">Invitation code:</string>
+    <string name="enterance">Building entrance</string>
 
     <string-array name="Block_type">
         <item>@string/Home</item>
